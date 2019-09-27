@@ -1,0 +1,17 @@
+strong-black {
+    color: black;
+    font-weight: bold;
+}
+
+strong-white {
+    color: white;
+    font-weight: bold;
+}
+
+body {
+    color: dimgrey;
+}
+
+html {
+    scroll-behavior: smooth;
+}
