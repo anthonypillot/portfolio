@@ -1,0 +1,97 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: dimgrey;
+}
+
+strong-black {
+    color: black;
+    font-weight: bold;
+}
+
+strong-white {
+    color: white;
+    font-weight: bold;
+}
+
+.main-carousel > .item > img {
+    width: 640px;
+    height: 360px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .slider-size {
+        height: auto;
+    }
+
+    .slider-size > img {
+        width: 80%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) and (min-width: 768px) {
+    .slider-size {
+        height: auto;
+    }
+
+    .slider-size > img {
+        width: 80%;
+    }
+}
+
+/* Laptops */
+@media (max-width: 1023px) and (min-width: 992px) {
+    .slider-size {
+        height: 200px;
+    }
+
+    .slider-size > img {
+        width: 80%;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    .slider-size {
+        height: 300px;
+    }
+
+    .slider-size > img {
+        width: 60%;
+    }
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 9999;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/* Main content */
+.card-header {
+    margin-top: 175px; /* Add a top margin to avoid content overlay */
+}
