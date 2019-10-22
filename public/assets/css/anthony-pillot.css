@@ -17,6 +17,14 @@ padding: 1%;
     border-color: white;
     padding: 2px;
 }
+.isotope-image-format {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: auto;
+    height: 250px;
+}
 
 .footer {
     color: #fff;
@@ -46,7 +54,7 @@ padding: 3px;
 }
 
 .right-image {
-width: 130%;
+width: 135%;
 border-width: 2px;
 }
 
