@@ -3,22 +3,25 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-    <meta content="Online CV / Book" name="description"/>
+    <meta content="online-cv-book" name="description"/>
     <meta content="Anthony PILLOT" name="author"/>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
 
     <!-- Bootstrap core CSS -->
-    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="assets/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="assets/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link href="assets/css/fontawesome.css" rel="stylesheet"/>
     <link href="assets/css/templatemo-style.css" rel="stylesheet"/>
     <link href="assets/css/owl.css" rel="stylesheet"/>
     <link href="assets/css/lightbox.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet"/>
 
-    <!-- Personnal Favicon-->
+    <!-- Personal CSS -->
+    <link href="assets/css/anthony-pillot.css" rel="stylesheet"/>
+
+    <!-- Personal Favicon-->
     <link href="assets/img/logo/favicon-code.png" rel="icon">
 
     <title>Anthony PILLOT - IT Developer</title>
@@ -48,25 +51,22 @@
                     </ul>
                 </nav>
                 <div class="social-network">
-                    <ul class="soial-icons">
+                    <ul class="social-icons">
                         <li>
-                            <a href="https://www.linkedin.com/in/anthony-pillot-a44067107/"><i
-                                    class="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/anthony-pillot-a44067107/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/PillotA"
-                            ><i class="fa fa-facebook"></i
-                            ></a>
+                            <a href="https://www.facebook.com/PillotA">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
                         </li>
-                        <!--                                                <li>-->
-                        <!--                                                    <a href="#"><i class="fa fa-dribbble"></i></a>-->
-                        <!--                                                </li>-->
-                        <!--                                                <li>-->
-                        <!--                                                    <a href="#"><i class="fa fa-rss"></i></a>-->
-                        <!--                                                </li>-->
                     </ul>
                 </div>
                 <div class="copyright-text">
@@ -79,7 +79,7 @@
     <section class="section about-me" data-section="section1">
         <div class="container">
             <div class="section-heading">
-                <h2>Profil :</h2>
+                <h2>Profil</h2>
                 <div class="line-dec"></div>
                 <span class="font-italic">Recherche d'un stage pour la période Décembre 2019 - Mars 2020. </span>
                 <br>
@@ -109,13 +109,11 @@
                     </div>
                     <div class="col-md-6">
                         <div class="right-text">
-                            <h4>Compétences et technologies :</h4>
+                            <h4>BusinessMS</h4>
                             <p>
-                                Donec tristique feugiat lacus, at sollicitudin nunc euismod
-                                sed. Mauris viverra, erat non sagittis gravida, elit dui
-                                mollis ante, sit amet eleifend purus ligula eget eros. Sed
-                                tincidunt quam vitae neque pharetra dignissim eget ut
-                                libero.
+                                Progiciel écrit en Java sous framework JavaFX et en JEE. Destiné aux TPE et aux
+                                indépendants, comprenant gestion de la clientèle
+                                des stocks et vente. Inférence statistiques, prédiction, notification, etc.
                             </p>
                             <div class="white-button">
                                 <a href="#">En savoir plus</a>
@@ -128,12 +126,17 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="left-text">
-                            <h4>Sed sagittis rhoncus velit</h4>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas. Vestibulum fermentum
-                                eleifend nibh, vitae sodales elit finibus pretium. Suspendisse potenti. Ut sollicitudin
-                                risus a sollicitudin semper.
+                            <h4>Scheduled-Shutdown (Bêta v.0.7.3)</h4>
+                            <p>Scheduled-Shutdown est un micro-programme qui planifie pour vous facilement et aisément
+                                l'arrêt de votre ordinateur,
+                                avec une interface utilisateur ergonomique et facilement prise en main. Le programme
+                                exécute simplement une commande SHELL dans le système d'opération.
+                                <br>
+                                <small>Disponible sur Windows. <span class="font-italic">Traduction anglaise et portage sur macOS en cours.</span></small>
                             </p>
+                            <div class="white-button">
+                                <a href="assets/data/scheduled-shutdown-0.7.3.exe">Téléchargement sur Windows</a>
+                            </div>
                             <div class="white-button">
                                 <a href="#">En savoir plus</a>
                             </div>
@@ -141,7 +144,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="right-image">
-                            <img alt="" src="assets/img/right-image.jpg"/>
+                            <img alt="" src="assets/img/scheduled-shutdown-presentation-double-alpha.png"/>
                         </div>
                     </div>
                 </div>
@@ -152,7 +155,7 @@
     <section class="section my-services" data-section="section2">
         <div class="container">
             <div class="section-heading">
-                <h2>Éducation - Compétence :</h2>
+                <h2>Éducation - Compétence</h2>
                 <div class="line-dec"></div>
                 <span>Présentation épurée de mes diplômes et de mes compétences concordant significatifs dans le milieu du développement informatique.</span>
             </div>
@@ -227,7 +230,7 @@
     <section class="section my-work" data-section="section3">
         <div class="container">
             <div class="section-heading">
-                <h2>Expérience :</h2>
+                <h2>Expérience</h2>
                 <div class="line-dec"></div>
                 <span>Rapide présentation de mes expériences dans le domaine du développement informatique.</span>
             </div>
@@ -265,7 +268,7 @@
                                 name="isotope-filter"
                                 type="radio"
                         />
-                            <span>autre</span></label
+                            <span>autre technologie</span></label
                         >
                     </form>
                     <div class="isotope-box">
@@ -391,8 +394,9 @@
     <section class="section contact-me" data-section="section4">
         <div class="container">
             <div class="section-heading">
-                <h2>Me contacter :</h2>
+                <h2>Me contacter</h2>
                 <div class="line-dec"></div>
+                <br>
                 <span>Je suis joignable par téléphone et par mail aux coordonnées ci-dessous :</span>
                 <br>
                 <br>
@@ -400,85 +404,126 @@
                 <br>
                 <span>Email : <a href="mailto:pillot.anthony@gmail.com"
                                  style="color: white">pillot.anthony@gmail.com</a></span>
-                <hr>
-                <span>Vous trouverez ci-joint directement en téléchargement mon CV complet format PDF
-                qui résume toutes les informations décrites sur ce site internet.</span>
-            </div>
-            <div class="row">
-                <div class="right-content">
-                    <div class="container">
-                        <form action="" id="contact" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <input
-                                                class="form-control"
-                                                id="name"
-                                                name="name"
-                                                placeholder="Votre nom ..."
-                                                required=""
-                                                type="text"/>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <input
-                                                class="form-control"
-                                                id="email"
-                                                name="email"
-                                                placeholder="Votre email ..."
-                                                required=""
-                                                type="text"/>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <input
-                                                class="form-control"
-                                                id="subject"
-                                                name="subject"
-                                                placeholder="Sujet du message ..."
-                                                required=""
-                                                type="text"/>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                        <textarea
-                                class="form-control"
-                                id="message"
-                                name="message"
-                                placeholder="Tapez ici votre message ..."
-                                required=""
-                                rows="6"></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <button class="button" id="form-submit" type="submit">Envoyer le message
-                                        </button>
-                                    </fieldset>
+
+                <div class="right-image-post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="left-text">
+                                <h4>Curriculum Vitæ :</h4>
+                                <p>Vous trouverez ci-joint en téléchargement mon CV complet, au format PDF,
+                                    qui résume toutes les informations décrites sur ce site internet.
+                                </p>
+                                <div class="white-button">
+                                    <a download="CV-Anthony-PILLOT.pdf"
+                                       href="assets/data/CV-Anthony-PILLOT-Octobre-2019.pdf">
+                                        Téléchargement format PDF</a>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="right-image">
+                                <a href="assets/data/CV-Anthony-PILLOT-Octobre-2019.pdf">
+                                    <img alt="" id="cv-picture"
+                                         src="assets/img/cv-image.png"/></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!--            <div class="row">-->
+            <!--                <div class="right-content">-->
+            <!--                    <div class="container">-->
+            <!--                        <form action="" id="contact" method="post">-->
+            <!--                            <div class="row">-->
+            <!--                                <div class="col-md-6">-->
+            <!--                                    <fieldset>-->
+            <!--                                        <input-->
+            <!--                                                class="form-control"-->
+            <!--                                                id="name"-->
+            <!--                                                name="name"-->
+            <!--                                                placeholder="Votre nom ..."-->
+            <!--                                                required=""-->
+            <!--                                                type="text"/>-->
+            <!--                                    </fieldset>-->
+            <!--                                </div>-->
+            <!--                                <div class="col-md-6">-->
+            <!--                                    <fieldset>-->
+            <!--                                        <input-->
+            <!--                                                class="form-control"-->
+            <!--                                                id="email"-->
+            <!--                                                name="email"-->
+            <!--                                                placeholder="Votre email ..."-->
+            <!--                                                required=""-->
+            <!--                                                type="text"/>-->
+            <!--                                    </fieldset>-->
+            <!--                                </div>-->
+            <!--                                <div class="col-md-12">-->
+            <!--                                    <fieldset>-->
+            <!--                                        <input-->
+            <!--                                                class="form-control"-->
+            <!--                                                id="subject"-->
+            <!--                                                name="subject"-->
+            <!--                                                placeholder="Sujet du message ..."-->
+            <!--                                                required=""-->
+            <!--                                                type="text"/>-->
+            <!--                                    </fieldset>-->
+            <!--                                </div>-->
+            <!--                                <div class="col-md-12">-->
+            <!--                                    <fieldset>-->
+            <!--                        <textarea-->
+            <!--                                class="form-control"-->
+            <!--                                id="message"-->
+            <!--                                name="message"-->
+            <!--                                placeholder="Tapez ici votre message ..."-->
+            <!--                                required=""-->
+            <!--                                rows="6"></textarea>-->
+            <!--                                    </fieldset>-->
+            <!--                                </div>-->
+            <!--                                <div class="col-md-12">-->
+            <!--                                    <fieldset>-->
+            <!--                                        <button class="button" id="form-submit" type="submit">Envoyer le message-->
+            <!--                                        </button>-->
+            <!--                                    </fieldset>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </form>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
         </div>
     </section>
+
+    <div class="footer">
+        <div>
+            <div class="container">
+                <div class="section-heading">
+                    <h4>Informations complémentaires</h4>
+                    <div class="line-dec"></div>
+                    <br>
+                    <span>Ce site web utilise les technologies tels que :</span>
+                    <br>
+                    <ul>
+                        Bootstrap 4.3.1
+                    </ul>
+                    <ul>
+                        Font Awesome X.X.X
+                    </ul>
+                    <ul>
+                        JavaScript X.X.X
+                    </ul>
+                    <br>
+                    <small>Dernière mise à jour du site web : Octobre 2019.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
-<script crossorigin="anonymous"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script crossorigin="anonymous"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script crossorigin="anonymous"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 <script src="assets/js/isotope.min.js"></script>
 <script src="assets/js/owl-carousel.js"></script>
@@ -488,8 +533,8 @@
     //according to loftblog tut
     $(".main-menu li:first").addClass("active");
 
-    var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
+    let showSection = function showSection(section, isAnimate) {
+        let direction = section.replace(/#/, ""),
             reqSection = $(".section").filter(
                 '[data-section="' + direction + '"]'
             ),
@@ -507,9 +552,9 @@
         }
     };
 
-    var checkSection = function checkSection() {
+    let checkSection = function checkSection() {
         $(".section").each(function () {
-            var $this = $(this),
+            let $this = $(this),
                 topEdge = $this.offset().top - 80,
                 bottomEdge = topEdge + $this.height(),
                 wScroll = $(window).scrollTop();

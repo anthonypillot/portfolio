@@ -1,0 +1,58 @@
+/*Copyright © 2019 Anthony PILLOT*/
+
+#profile-picture {
+width: 65%;
+
+border-width: 2px;
+border-style: solid;
+border-color: white;
+padding: 1%;
+}
+
+#cv-picture {
+    width: 40%;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    padding: 2px;
+}
+
+.footer {
+    color: #fff;
+    width: 55%;
+    right: 10%;
+    left: 35%;
+    position: relative;
+    /*min-height: 30vh;*/
+    /*padding-bottom: 60px;*/
+    border-top: 3px solid rgba(250, 250, 250, 0.25);
+}
+
+.line-dec {
+width: 60px;
+height: 3px;
+background-color: #a43f49;
+margin: 10px auto;
+}
+
+.left-image {
+width: 100%;
+border-width: 2px;
+border-style: solid;
+border-color: white;
+border-radius: 0;
+padding: 3px;
+}
+
+.right-image {
+width: 130%;
+border-width: 2px;
+}
+
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}

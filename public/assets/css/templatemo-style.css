@@ -150,7 +150,7 @@ html {
 }
 
 .menu .social-network {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .menu .social-network ul li {
@@ -176,7 +176,7 @@ html {
 
 .menu .copyright-text {
     position: relative;
-    margin-top: 60px;
+    margin-top: 35px;
 }
 
 .menu .copyright-text p {
@@ -362,10 +362,10 @@ button:hover {
     border-top: 2px solid rgba(250, 250, 250, 0.1);
 }
 
-.left-image img,
-.right-image img {
-    border-radius: 5px;
-}
+/*.left-image img,*/
+/*.right-image img {*/
+/*    border-radius: 5px;*/
+/*}*/
 
 .right-image-post h4,
 .left-image-post h4 {
