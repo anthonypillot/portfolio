@@ -5,8 +5,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-#page-wraper {
-    background: url(../images/apple-keyboard.jpg) no-repeat center center fixed;
+#page-wrapper {
+    background: url("../img/background/LilleGrandPlace-blur.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -216,7 +216,7 @@ html {
     left: 10%;
     -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
     -webkit-overflow-scrolling: touch;
-    background-color: #371919;
+    background-color: #552121;
     box-sizing: border-box;
     height: 100vh;
     max-height: 100vh !important;
@@ -428,35 +428,35 @@ button:hover {
 }
 
 .service-item .first-service-icon {
-    background-image: url(../images/first-white-icon.png);
+    background-image: url(../img/first-white-icon.png);
 }
 
 .service-item:hover .first-service-icon {
-    background-image: url(../images/first-main-icon.png);
+    background-image: url(../img/first-main-icon.png);
 }
 
 .service-item .second-service-icon {
-    background-image: url(../images/second-white-icon.png);
+    background-image: url(../img/second-white-icon.png);
 }
 
 .service-item:hover .second-service-icon {
-    background-image: url(../images/second-main-icon.png);
+    background-image: url(../img/second-main-icon.png);
 }
 
 .service-item .third-service-icon {
-    background-image: url(../images/third-white-icon.png);
+    background-image: url(../img/third-white-icon.png);
 }
 
 .service-item:hover .third-service-icon {
-    background-image: url(../images/third-main-icon.png);
+    background-image: url(../img/third-main-icon.png);
 }
 
 .service-item .fourth-service-icon {
-    background-image: url(../images/fourth-white-icon.png);
+    background-image: url(../img/fourth-white-icon.png);
 }
 
 .service-item:hover .fourth-service-icon {
-    background-image: url(../images/fourth-main-icon.png);
+    background-image: url(../img/fourth-main-icon.png);
 }
 
 
