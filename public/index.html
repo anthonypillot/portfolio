@@ -24,6 +24,9 @@
     <!-- Personal Favicon-->
     <link href="assets/img/logo/favicon-code.png" rel="icon">
 
+    <!-- Personal JavaScript -->
+    <script src="js/tool.js"></script>
+
     <title>Anthony PILLOT - IT Developer</title>
 </head>
 <body>
@@ -35,7 +38,7 @@
         <div class="menu" id="menu">
             <i class="fa fa-times" id="menu-close"></i>
             <div class="container">
-                <div class="img-fluid" style="width: 80%; margin: auto; padding-top: 20px">
+                <div class="img-fluid" id="section-profile-picture">
                     <a><img alt="" id="profile-picture" src="assets/img/picture/©-KW-picture-profile.jpg"/></a>
                 </div>
                 <div class="author-content">
@@ -121,10 +124,18 @@
                     </div>
                     <div class="col-md-6">
                         <div class="right-text">
-                            <h4>BusinessMS®</h4>
-                            <p> Progiciel écrit en Java sous framework JavaFX et en JEE. Destiné aux TPE et aux
+                            <h4>Business<span class="blue-bms-color">MS</span><small>®</small></h4>
+                            <small>Business <span
+                                    class="blue-bms-color">Management Solution</span><small>®</small> par l'AFL
+                                Team.</small>
+                            <p> Progiciel écrit en langage <code class="blue-bms-color">Java</code> sous framework <code
+                                    class="blue-bms-color">JavaFX</code> et
+                                <code class="blue-bms-color">JEE</code>.
+                                <br>
+                                Destiné aux TPE et aux
                                 indépendants, comprenant gestion de la clientèle
-                                des stocks et vente. Inférence statistiques, prédiction, notification, etc.
+                                des stocks et vente. Fonctionnalités d'inférence statistique, de prédiction, de système
+                                de notification, etc.
                             </p>
                             <div class="white-button">
                                 <a href="#">En savoir plus</a>
@@ -137,23 +148,28 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="left-text">
-                            <h4>Scheduled-Shutdown (Bêta v.0.7.3)</h4>
-                            <p><span class="font-weight-bold">Scheduled-Shutdown</span> est un application grand public
-                                qui planifie facilement et aisément
-                                l'arrêt de votre ordinateur,
+                            <h4>Scheduled-Shutdown <small>(ver. <code class="blue-ss-color">bêta 0.7.3</code>)</small>
+                            </h4>
+                            <p><span class="font-weight-bold">Scheduled-Shutdown</span> est un application grand
+                                public qui planifie facilement et aisément l'arrêt de votre ordinateur,
                                 avec une interface utilisateur ergonomique et accessible. Le programme
-                                exécute simplement une commande SHELL dans le système d'opération.
+                                exécute simplement une commande <code class="blue-ss-color">SHELL</code> dans le système
+                                d'opération.
                                 <br>
                                 <br>
-                                <small>Disponible dès maintenant sur<i class="fab fa-windows"
-                                                                       style="padding-left: 5px; padding-right: 5px"></i>Windows.<span
-                                        class="font-italic">
+                                <span>Bientôt écrite également en Node.js<i class="fab fa-node-js padding-5"
+                                                                            style="color: #689f63"></i>avec
+                                    le framework Electron.</span>
+                                <br>
+                                <br>
+                                <small>Disponible dès maintenant sur Windows<i class="fab fa-windows padding-5"></i>.
                                     <br>
-                                    Traduction anglaise et portage sur<i class="fab fa-apple"
-                                                                         style="padding-left: 5px; padding-right: 5px"></i>macOS en cours.</span></small>
+                                    <span class="font-italic">
+                                    Traduction anglaise et portage sur macOS<i class="fab fa-apple padding-5"></i>en cours.</span></small>
                             </p>
                             <div class="white-button">
-                                <a href="assets/data/scheduled-shutdown-0.7.3.exe">Téléchargement sur Windows</a>
+                                <a href="assets/data/scheduled-shutdown-0.7.3.exe">Téléchargement pour Windows<i
+                                        class="fas fa-download" style="padding-left: 10px"></i></a>
                             </div>
                             <div class="white-button">
                                 <a href="#">En savoir plus</a>
@@ -409,7 +425,7 @@
 
                 <div class="right-image-post">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="left-text">
                                 <h4><i class="fas fa-file-signature" style="padding-right: 10px"></i>Curriculum Vitæ
                                 </h4>
@@ -424,16 +440,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="right-image">
                                 <a href="assets/data/CV-Anthony-PILLOT-Octobre-2019.pdf">
-                                    <img alt="" id="cv-picture"
+                                    <img alt="" id="cv-picture-pdf"
                                          src="assets/img/cv-image.png"/></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!--            <div class="row">-->
             <!--                <div class="right-content">-->
             <!--                    <div class="container">-->
@@ -498,25 +515,28 @@
         </div>
     </section>
 
-    <div class="footer">
+    <div class="section-footer">
         <div class="container">
             <div class="section-heading">
                 <h4>Informations complémentaires</h4>
                 <div class="line-dec"></div>
                 <br>
-                <div class="jumbotron" id="footer-more">
+                <div id="section-footer">
                     <span>Ce site web utilise les technologies suivantes :</span>
                     <br>
-                    <span><i class="fab fa-bootstrap" style="padding-right: 6px"></i>Bootstrap 4.3.1</span>
                     <br>
-                    <span><i class="fab fa-font-awesome" style="padding-right: 6px"></i>Font Awesome 5.11.2</span>
+                    <span><i class="fab fa-bootstrap padding-5"></i>Bootstrap <code>(4.3.1)</code></span>
                     <br>
-                    <span><i class="fab fa-js-square" style="padding-right: 6px"></i>JavaScript</span>
+                    <span><i class="fab fa-font-awesome padding-5"></i>Font Awesome <code>(5.11.2)</code></span>
                     <br>
                     <br>
-                    <small><i class="fas fa-arrow-circle-down" style="padding-right: 5px"></i>Dernière mise à jour :
-                        Octobre
-                        2019.</small>
+                    <span><i class="fab fa-html5 padding-5"></i>HTML5<i class="fab fa-css3-alt padding-5"></i>CSS3
+                        <i class="fab fa-js-square padding-5"></i>JavaScript</span>
+                    <br>
+                    <br>
+                    <small><i class="fas fa-arrow-circle-down padding-5"></i>Dernière mise à jour :
+                        <script>document.write(printCurrentMonthYear())</script>
+                        .</small>
                 </div>
             </div>
         </div>
@@ -532,8 +552,8 @@
 <script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/lightbox.js"></script>
 <script src="assets/js/custom.js"></script>
+
 <script>
-    //according to loftblog tut
     $(".main-menu li:first").addClass("active");
 
     let showSection = function showSection(section, isAnimate) {

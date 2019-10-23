@@ -150,7 +150,7 @@ html {
 }
 
 .menu .social-network {
-    margin-top: 60px;
+    margin-top: 10%;
 }
 
 .menu .social-network ul li {
@@ -176,7 +176,7 @@ html {
 
 .menu .copyright-text {
     position: relative;
-    margin-top: 60px;
+    margin-top: 10%;
 }
 
 .menu .copyright-text p {

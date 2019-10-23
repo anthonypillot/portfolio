@@ -1,7 +1,7 @@
-/*Copyright © 2019 Anthony PILLOT*/
+/* Copyright © 2019 Anthony PILLOT */
 
 #profile-picture {
-    width: 65%;
+    width: 60%;
 
     border-width: 2px;
     border-style: solid;
@@ -9,7 +9,7 @@
     padding: 1%;
 }
 
-#cv-picture {
+#cv-picture-pdf {
     width: 40%;
 
     border-width: 1px;
@@ -18,10 +18,29 @@
     padding: 2px;
 }
 
-#footer-more {
-    background-color: rgba(68,26,26,0.8);
+#section-profile-picture {
+    padding-top: 10%;
+}
+
+#section-footer {
+    background-color: rgba(68, 26, 26, 0.8);
     padding: 15px;
 }
+
+/*NB : bms like Business Management Solution*/
+.blue-bms-color {
+    color: #54c0eb
+}
+/*NB : ss like Scheduled-Shutdown*/
+.blue-ss-color {
+    color: #b5d7f2;
+}
+
+.padding-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 
 .isotope-image-format {
     display: block;
@@ -32,14 +51,12 @@
     height: 250px;
 }
 
-.footer {
+.section-footer {
     color: #fff;
     width: 55%;
     right: 10%;
     left: 35%;
     position: relative;
-    /*min-height: 30vh;*/
-    /*padding-bottom: 60px;*/
     border-top: 3px solid rgba(250, 250, 250, 0.25);
 }
 
@@ -64,6 +81,9 @@
     border-width: 2px;
 }
 
+code {
+    color: #ff515b;
+}
 
 h2 {
     font-size: 32px;
@@ -72,12 +92,28 @@ h2 {
 }
 
 @media screen and (max-width: 375px) {
-    .menu .copyright-text {
-        position: relative;
-        margin-top: 20px;
+    .menu .social-network {
+        margin-top: 25px;
     }
 
-    .menu .social-network {
-        margin-top: 30px;
+    .menu .copyright-text {
+    position: relative;
+    margin-top: 20px;
+}
+    .menu .copyright-text p {
+        border-top: 1px solid rgba(250, 250, 250, 0.1);
+        display: inline-block;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        font-size: 13px;
+     }
+
+}
+
+@media (min-width: 375px) {
+    .jumbotron {
+        padding: 4rem 2rem
     }
 }
