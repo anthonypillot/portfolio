@@ -29,6 +29,15 @@
     padding: 15px;
 }
 
+figure.isotope-figure {
+    height: 250px;
+    width: 600px;
+}
+
+.isotope-content {
+    padding: 5%;
+}
+
 /*NB : bms like Business Management Solution*/
 .blue-bms-color {
     color: #54c0eb
@@ -43,7 +52,6 @@
     padding-left: 5px;
     padding-right: 5px;
 }
-
 
 .isotope-image-format {
     display: block;

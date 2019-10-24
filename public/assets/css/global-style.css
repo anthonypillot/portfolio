@@ -538,21 +538,21 @@ section.my-work .section-heading {
     min-height: 60px;
 }
 
-figure.snip1321 {
+figure.isotope-figure {
     overflow: hidden;
     text-align: center;
     -webkit-perspective: 50em;
     perspective: 50em;
 }
 
-figure.snip1321 * {
+figure.isotope-figure * {
     -webkit-box-sizing: padding-box;
     box-sizing: padding-box;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
-figure.snip1321 figcaption {
+figure.isotope-figure figcaption {
     top: 50%;
     left: 20px;
     right: 20px;
@@ -561,20 +561,20 @@ figure.snip1321 figcaption {
     z-index: 1;
 }
 
-figure.snip1321 h4 {
+figure.isotope-figure h4 {
     margin-top: 15px;
     margin-bottom: 5px;
     color: #232323;
 }
 
-figure.snip1321 span {
+figure.isotope-figure span {
     font-size: 14px;
     font-style: italic;
     display: block;
     color: #7a7a7a;
 }
 
-figure.snip1321 i {
+figure.isotope-figure i {
     position: relative !important;
     font-size: 18px;
     background-color: #a43f49;
@@ -587,7 +587,7 @@ figure.snip1321 i {
     color: #fff;
 }
 
-figure.snip1321:after {
+figure.isotope-figure:after {
     background-color: #ffffff;
     position: absolute;
     content: "";
@@ -606,7 +606,7 @@ figure.snip1321:after {
     opacity: 0;
 }
 
-figure.snip1321 a {
+figure.isotope-figure a {
     left: 0;
     right: 0;
     top: 0;
@@ -614,8 +614,8 @@ figure.snip1321 a {
     z-index: 1;
 }
 
-figure.snip1321:hover figcaption,
-figure.snip1321.hover figcaption {
+figure.isotope-figure:hover figcaption,
+figure.isotope-figure.hover figcaption {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     opacity: 1;
@@ -623,8 +623,8 @@ figure.snip1321.hover figcaption {
     transition-delay: 0.2s;
 }
 
-figure.snip1321:hover:after,
-figure.snip1321.hover:after {
+figure.isotope-figure:hover:after,
+figure.isotope-figure.hover:after {
     -webkit-transform: rotateX(0);
     transform: rotateX(0);
     opacity: 0.9;
