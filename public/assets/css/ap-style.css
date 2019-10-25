@@ -34,6 +34,10 @@ figure.isotope-figure {
     width: 600px;
 }
 
+.menu {
+    background-color: rgba(85, 33, 33, 0.90);
+}
+
 .isotope-content {
     padding: 5%;
 }
@@ -48,7 +52,11 @@ figure.isotope-figure {
     color: #b5d7f2;
 }
 
-.padding-5 {
+.padding-2-percent-r {
+    padding-right: 2%;
+}
+
+.padding-5-pixel-lr {
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -63,7 +71,8 @@ figure.isotope-figure {
     border-radius: 4px;
 
     width: auto;
-    height: 150px;
+    /*TODO vérifier la valeur*/
+    height: 60%;
 }
 
 .section-footer {
