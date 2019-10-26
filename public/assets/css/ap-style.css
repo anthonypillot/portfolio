@@ -91,15 +91,6 @@ figure.isotope-figure {
     margin: 10px auto;
 }
 
-.left-image {
-    width: 100%;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 0;
-    padding: 3px;
-}
-
 .right-image {
     width: 135%;
 }
