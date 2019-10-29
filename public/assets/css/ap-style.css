@@ -24,9 +24,24 @@
     padding-top: 10%;
 }
 
-#section-footer {
-    background-color: rgba(68, 26, 26, 0.8);
+#container-footer {
+    background-color: rgba(68, 26, 26, 0.7);
     padding: 15px;
+}
+
+#google-maps {
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    padding: 2px;
+    opacity: 0.9;
+}
+
+.container-google-maps {
+    background-color: rgba(245, 245, 245, 0.1);
+    margin-top: 15px;
+    padding-top: 12px;
+    padding-bottom: 10px;
 }
 
 figure.isotope-figure {
