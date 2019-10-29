@@ -1,1 +1,2 @@
+#Redirect root of server to '/fr/'
 RedirectMatch ^/$ /fr/

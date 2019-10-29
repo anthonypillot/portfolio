@@ -37,6 +37,15 @@
     opacity: 0.9;
 }
 
+.section-logo-xp {
+    padding-top: 20px;
+}
+
+.section-logo-xp img {
+    width: 170px;
+    height: 170px;
+}
+
 .container-google-maps {
     background-color: rgba(245, 245, 245, 0.1);
     margin-top: 15px;
@@ -57,14 +66,19 @@ figure.isotope-figure {
     padding: 5%;
 }
 
-/*NB : bms like Business Management Solution*/
+/* NB : bms like Business Management Solution */
 .blue-bms-color {
     color: #54c0eb
 }
 
-/*NB : ss like Scheduled-Shutdown*/
+/* NB : ss like Scheduled-Shutdown */
 .blue-ss-color {
     color: #b5d7f2;
+}
+
+/* Node.js logo's color */
+.green-node {
+    color: #689f63;
 }
 
 .padding-2-percent-r {

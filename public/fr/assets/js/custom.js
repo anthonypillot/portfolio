@@ -48,8 +48,8 @@
     $(this).removeClass("hover");
   });
 
-  $(".isotope-wrapper").each(function() {
-    var $isotope = $(".isotope-box", this);
+  $(".svg-wrapper").each(function() {
+    var $isotope = $(".svg-box", this);
     var $filterCheckboxes = $('input[type="radio"]', this);
 
     var filter = function() {
@@ -61,7 +61,7 @@
     };
 
     $isotope.isotope({
-      itemSelector: ".isotope-item",
+      itemSelector: ".svg-item",
       layoutMode: "masonry"
     });
 
