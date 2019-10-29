@@ -71,6 +71,10 @@ figure.isotope-figure {
     padding-right: 2%;
 }
 
+.padding-1-percent-r {
+    padding-right: 1%;
+}
+
 .padding-5-pixel-lr {
     padding-left: 5px;
     padding-right: 5px;
@@ -134,7 +138,6 @@ h2 {
         margin-right: auto;
     }
 
-
     .menu .social-network {
         margin-top: 25px;
     }
@@ -161,6 +164,10 @@ h2 {
 
     .right-image-pdf {
         width: 100%;
+    }
+
+    .container-google-maps {
+        visibility: hidden;
     }
 
     .section-footer {
