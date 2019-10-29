@@ -25,7 +25,7 @@
 }
 
 #container-footer {
-    background-color: rgba(68, 26, 26, 0.7);
+    background-color: rgba(68, 26, 26, 0.6);
     padding: 15px;
 }
 
@@ -37,20 +37,22 @@
     opacity: 0.9;
 }
 
-.section-logo-xp {
-    padding-top: 20px;
-}
-
-.section-logo-xp img {
-    width: 170px;
-    height: 170px;
-}
-
 .container-google-maps {
     background-color: rgba(245, 245, 245, 0.1);
     margin-top: 15px;
     padding-top: 12px;
     padding-bottom: 10px;
+}
+
+.section-logo-xp {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.section-logo-xp img {
+    width: 170px;
+    height: 170px;
 }
 
 figure.isotope-figure {
@@ -143,8 +145,22 @@ h2 {
     color: #fff;
 }
 
+/* Block horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative
+}
+
 /* Match with the iPhone 11/XR resolution */
 @media screen and (max-width: 414px) {
+
+    .menu {
+        background-color: rgba(85, 33, 33, 0.98);
+    }
+
     #cv-picture-pdf {
         width: 80%;
         padding: 2px;
@@ -181,6 +197,7 @@ h2 {
     }
 
     .container-google-maps {
+        display: none;
         visibility: hidden;
     }
 
@@ -194,13 +211,12 @@ h2 {
         border-top: 3px solid rgba(250, 250, 250, 0.25);
     }
 
-    figure.isotope-figure {
-        width: 100%;
+    .section-logo-xp {
+        padding: 0;
+        background: rgba(255, 255, 255, 0.1);
     }
 
-    @media (min-width: 414px) {
-        .jumbotron {
-            padding: 4rem 2rem
-        }
+    figure.isotope-figure {
+        width: 100%;
     }
 }
