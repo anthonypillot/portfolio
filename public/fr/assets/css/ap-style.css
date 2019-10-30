@@ -37,22 +37,32 @@
     opacity: 0.9;
 }
 
+.container-contact {
+    /*margin: 1% auto;*/
+    margin-bottom: 2%;
+    /*width: 250px;*/
+    /*padding: 2px;*/
+    /*border-width: 2px;*/
+    /*border-style: solid;*/
+    /*border-color: white;*/
+}
+
 .container-google-maps {
+    margin: 0 auto;
     background-color: rgba(245, 245, 245, 0.1);
-    margin-top: 15px;
     padding-top: 12px;
     padding-bottom: 10px;
 }
 
 .section-logo-xp {
     margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
 }
 
 .section-logo-xp img {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
 }
 
 figure.isotope-figure {
@@ -212,7 +222,7 @@ body {
     }
 
     .section-logo-xp {
-        padding: 0;
+        padding: 18px;
         background: rgba(255, 255, 255, 0.1);
     }
 
