@@ -136,6 +136,19 @@ figure.isotope-figure {
     margin: 10px auto;
 }
 
+/*Bounce effect :*/
+.left-image {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.left-image:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 .right-image {
     width: 135%;
 }
