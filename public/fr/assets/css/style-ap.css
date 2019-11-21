@@ -37,10 +37,6 @@
     opacity: 0.9;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /*Bounce effect :*/
 .bounce-effect-small {
     -webkit-transform: scale(1);
@@ -214,11 +210,21 @@ html, body {
 }
 
 body {
-    position: relative
+    position: relative;
+}
+
+/* Global options */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Match with the iPhone 11/XR resolution */
 @media screen and (max-width: 414px) {
+
+    /*TODO patch smooth scrolling on mobile*/
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
 
     .menu {
         background-color: rgba(85, 33, 33, 0.98);
