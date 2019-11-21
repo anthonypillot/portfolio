@@ -35,6 +35,8 @@
         gtag('js', new Date());
         gtag('config', 'UA-151161310-1');
     </script>
+    <!-- End Google Analytics code -->
+
     <!-- Matomo Analytics -->
     <script type="text/javascript">
         var _paq = window._paq || [];
@@ -57,8 +59,9 @@
     <noscript><p><img alt=""
                       src="https://www.anthony-pillot.com/analytics/matomo/matomo.php?idsite=1&amp;rec=1"
                       style="border:0;"/></p></noscript>
-    <!-- End Matomo Code -->
+    <!-- End Matomo Analytics code -->
 
+    <!-- Site title -->
     <title>Anthony Pillot - IT Developer</title>
 </head>
 <body>
@@ -70,7 +73,7 @@
         <div class="menu" id="menu">
             <i class="fa fa-times" id="menu-close"></i>
             <div class="container">
-                <div class="img-fluid" id="section-profile-picture">
+                <div class="img-fluid bounce-effect-medium" id="section-profile-picture">
                     <a><img alt="" id="profile-picture" src="assets/img/picture/profile-picture.jpg"/></a>
                 </div>
                 <div class="author-content">
@@ -95,15 +98,18 @@
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://github.com/RAIIIIIN" rel="noopener noreferrer" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
+                        <!--                        <li>-->
+                        <!--                            <a href="https://github.com/RAIIIIIN" rel="noopener noreferrer" target="_blank">-->
+                        <!--                                <i class="fab fa-github"></i>-->
+                        <!--                            </a>-->
+                        <!--                        </li>-->
                         <li>
                             <a href="https://gitlab.com/RAIIIIIN" rel="noopener noreferrer" target="_blank">
                                 <i class="fab fa-gitlab"></i>
                             </a>
+                        </li>
+                        <li>
+                            <div><a id="cv" href="#section-cv"><i class="far fa-file-pdf"></i></a></div>
                         </li>
                     </ul>
                 </div>
@@ -114,7 +120,7 @@
         </div>
     </div>
 
-    <section class="section about-me" data-section="section1">
+    <section class="section about-me" id="section1">
         <div class="container">
             <div class="section-heading">
                 <h2><i class="fas fa-portrait padding-2-percent-r"></i>Profil</h2>
@@ -147,8 +153,10 @@
             <div class="left-image-post">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="left-image">
-                            <img alt="" src="assets/img/businessms-presentation.jpg"/>
+                        <div class="left-image bounce-effect-small">
+                            <a href="businessms/"
+                               rel="noopener noreferrer"
+                               target="_blank"><img alt="" src="assets/img/businessms-presentation.jpg"/></a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -211,8 +219,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="right-image">
-                            <img alt="" src="assets/img/scheduled-shutdown-presentation-double-alpha.png"/>
+                        <div class="right-image bounce-effect-small">
+                            <a href="https://sourceforge.net/projects/scheduled-shutdown/"
+                               rel="noopener noreferrer" target="_blank"><img alt=""
+                                                                              src="assets/img/scheduled-shutdown-presentation-double-alpha.png"/></a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +230,7 @@
         </div>
     </section>
 
-    <section class="section my-services" data-section="section2">
+    <section class="section my-services" id="section2">
         <div class="container">
             <div class="section-heading">
                 <h2><i class="fas fa-graduation-cap padding-2-percent-r"></i>Éducation - Compétence</h2>
@@ -307,7 +317,7 @@
         </div>
     </section>
 
-    <section class="section my-work" data-section="section3">
+    <section class="section my-work" id="section3">
         <div class="container">
             <div class="section-heading">
                 <h2><i class="fas fa-briefcase padding-2-percent-r"></i>Expérience</h2>
@@ -357,17 +367,20 @@
             </div>
 
             <div class="section-logo-xp">
-                <img alt="java_logo.svg" src="assets/img/svg/java_logo.svg">
-                <img alt="node.js_logo.svg" src="assets/img/svg/node.js_logo.svg">
-                <img alt="postgresql_text_logo.svg" src="assets/img/svg/postgresql_text_logo.svg">
-                <img alt="git_logo.svg" src="assets/img/svg/git_logo.svg" style="padding-right: 15px">
-                <img alt="ubuntu_text_logo.svg" src="assets/img/svg/ubuntu_test_logo.svg" style="padding-right: 15px">
-                <img alt="jetbrains_logo.svg" src="assets/img/svg/jetbrains_logo.svg">
+                <img alt="java_logo.svg" class="bounce-effect-extra-large" src="assets/img/svg/java_logo.svg">
+                <img alt="node.js_logo.svg" class="bounce-effect-large" src="assets/img/svg/node.js_logo.svg">
+                <img alt="postgresql_text_logo.svg" class="bounce-effect-extra-large"
+                     src="assets/img/svg/postgresql_text_logo.svg">
+                <img alt="git_logo.svg" class="bounce-effect-extra-large" src="assets/img/svg/git_logo.svg"
+                     style="padding-right: 15px">
+                <img alt="ubuntu_text_logo.svg" class="bounce-effect-extra-large"
+                     src="assets/img/svg/ubuntu_test_logo.svg" style="padding-right: 15px">
+                <img alt="jetbrains_logo.svg" class="bounce-effect-extra-large" src="assets/img/svg/jetbrains_logo.svg">
             </div>
         </div>
     </section>
 
-    <section class="section contact-me" data-section="section4">
+    <section class="section contact-me" id="section4">
         <div class="container">
             <div class="section-heading">
                 <h2><i class="fas fa-paper-plane padding-2-percent-r"></i>Me contacter</h2>
@@ -391,7 +404,7 @@
                             style="border:0;" width="900"></iframe>
                 </div>
 
-                <div class="right-image-post">
+                <div class="right-image-post" id="section-cv">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="left-text">
@@ -409,7 +422,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <div class="right-image-pdf">
+                            <div class="right-image-pdf bounce-effect-large">
                                 <a href="assets/data/CV-Anthony-PILLOT.pdf" rel="noopener noreferrer" target="_blank">
                                     <img alt="" id="cv-picture-pdf"
                                          src="assets/img/cv-image.png"/></a>
@@ -445,7 +458,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <!-- Scripts -->
@@ -455,54 +467,5 @@
 <script src="assets/js/isotope.min.js"></script>
 <script src="assets/js/lightbox.js"></script>
 <script src="assets/js/animation.js"></script>
-<script>
-    $(".main-menu li:first").addClass("active");
-
-    let showSection = function showSection(section, isAnimate) {
-        let direction = section.replace(/#/, ""),
-            reqSection = $(".section").filter(
-                '[data-section="' + direction + '"]'
-            ),
-            reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-            $("body, html").animate(
-                {
-                    scrollTop: reqSectionPos
-                },
-                800
-            );
-        } else {
-            $("body, html").scrollTop(reqSectionPos);
-        }
-    };
-
-    let checkSection = function checkSection() {
-        $(".section").each(function () {
-            let $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                let currentId = $this.data("section"),
-                    reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-                reqLink
-                    .closest("li")
-                    .addClass("active")
-                    .siblings()
-                    .removeClass("active");
-            }
-        });
-    };
-
-    $(".main-menu").on("click", "a", function (e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-    });
-
-    $(window).scroll(function () {
-        checkSection();
-    });
-</script>
 </body>
 </html>

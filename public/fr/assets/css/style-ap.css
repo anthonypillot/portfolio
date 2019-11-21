@@ -37,6 +37,59 @@
     opacity: 0.9;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/*Bounce effect :*/
+.bounce-effect-small {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.bounce-effect-small:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.bounce-effect-medium {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.bounce-effect-medium:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.bounce-effect-large {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.bounce-effect-large:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.bounce-effect-extra-large {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.bounce-effect-extra-large:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
 .container-contact {
     /*margin: 1% auto;*/
     margin-bottom: 2%;
@@ -134,19 +187,6 @@ figure.isotope-figure {
     height: 3px;
     background-color: #a43f49;
     margin: 10px auto;
-}
-
-/*Bounce effect :*/
-.left-image {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-.left-image:hover {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
 }
 
 .right-image {
