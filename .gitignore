@@ -1,21 +1,37 @@
 
-# Created by https://www.gitignore.io/api/linux,macos,windows,webstorm+all
-# Edit at https://www.gitignore.io/?templates=linux,macos,windows,webstorm+all
+# Created by https://www.gitignore.io/api/macos,windows,angular,webstorm+all
+# Edit at https://www.gitignore.io/?templates=macos,windows,angular,webstorm+all
 
-### Linux ###
-*~
+### Angular ###
+## Angular ##
+# compiled output
+dist/
+tmp/
+app/**/*.js
+app/**/*.js.map
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
+# dependencies
+node_modules/
+bower_components/
 
-# KDE directory preferences
-.directory
+# IDEs and editors
+.idea/
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
 
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
+# e2e
+e2e/*.js
+e2e/*.map
+
+#System Files
+.DS_Store/
 
 ### macOS ###
 # General
@@ -119,7 +135,6 @@ fabric.properties
 # Ignores the whole .idea folder and all .iml files
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
 
-.idea/
 
 # Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
 
@@ -157,4 +172,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/linux,macos,windows,webstorm+all
+# End of https://www.gitignore.io/api/macos,windows,angular,webstorm+all
