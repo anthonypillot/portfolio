@@ -1,13 +1,72 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
-  <meta charset="utf-8">
-  <title>Angular from scratch</title>
   <base href="./">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta
+    content="Anthony Pillot Développeur informatique à Lille - IT Developer. Formé sur le back-end Java, je travaille également en parallèle sur d'autre technologies telles que Node.js et Angular."
+    name="description"/>
+  <meta content="Anthony Pillot" name="author"/>
+  <meta content="0.0.1" name="version"/>
+
+  <!-- Favicon-->
+  <link href="assets/img/logo/favicon-code.png" rel="icon" type="image/x-icon">
+  <link href="assets/img/logo/favicon-code.png" rel="apple-touch-icon" type="image/x-icon"/>
+
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151161310-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-151161310-1');
+  </script>
+  <!-- End Google Analytics code -->
+
+  <!-- Matomo Analytics -->
+  <script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setCookieDomain", "*.www.anthony-pillot.com"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "https://www.anthony-pillot.com/analytics/matomo/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + 'matomo.js';
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <noscript><p><img alt=""
+                    src="https://www.anthony-pillot.com/analytics/matomo/matomo.php?idsite=1&amp;rec=1"
+                    style="border:0;"/></p></noscript>
+  <!-- End Matomo Analytics code -->
+
+  <!-- Site title -->
+  <title>Anthony Pillot - IT Developer</title>
 </head>
+
 <body>
-  <app-root></app-root>
+
+<app-root></app-root>
+
+<!-- Animation core JavaScript -->
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/animation.js"></script>
 </body>
 </html>
