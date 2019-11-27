@@ -28,7 +28,13 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/tool/date-formatter.js",
+              "src/assets/js/isotope.min.js",
+              "src/assets/js/lightbox.js",
+              "src/assets/js/animation.js"
+            ]
           },
           "configurations": {
             "production": {
