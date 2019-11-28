@@ -119,6 +119,10 @@ figure.isotope-figure {
     width: 600px;
 }
 
+.list-inline li {
+    display: inline-block;
+}
+
 .menu {
     background-color: rgba(85, 33, 33, 0.90);
 }
