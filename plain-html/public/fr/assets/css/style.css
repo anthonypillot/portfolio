@@ -351,12 +351,21 @@ button:hover {
 
 /* Left & Right Post */
 
-/*TODO Temporary comment below to mask BusinessMS*/
-/*.right-image-post {*/
-/*    margin-top: 60px;*/
-/*    padding-top: 60px;*/
-/*    border-top: 2px solid rgba(250, 250, 250, 0.1);*/
-/*}*/
+.right-image-project {
+    /*margin-top: 60px;*/
+    /*padding-top: 60px;*/
+    /*border-top: 2px solid rgba(250, 250, 250, 0.1);*/
+}
+
+.right-image-post {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 2px solid rgba(250, 250, 250, 0.1);
+}
+
+.white-button {
+    margin-top: 25px;
+}
 
 /*.left-image img,*/
 /*.right-image img {*/
