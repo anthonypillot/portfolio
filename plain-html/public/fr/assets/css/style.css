@@ -38,6 +38,13 @@ p {
     color: #fff;
 }
 
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.25px;
+}
+
 h4 {
     font-size: 26px;
     font-weight: 700;
@@ -135,7 +142,7 @@ html {
     margin: 40px 0px 60px 0px;
 }
 
-.menu .author-content h4 {
+.menu .author-content h1, h4 {
     margin-bottom: 0px;
 }
 
@@ -372,8 +379,8 @@ button:hover {
 /*    border-radius: 5px;*/
 /*}*/
 
-.right-image-post h4,
-.left-image-post h4 {
+.right-image-post h1, h4,
+.left-image-post h1, h4 {
     margin-top: 22px;
 }
 
@@ -402,7 +409,7 @@ button:hover {
     transition: all 0.5s;
 }
 
-.service-item h4 {
+.service-item h1, h4 {
     transition: all 0.5s;
 }
 
