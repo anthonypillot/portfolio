@@ -174,6 +174,8 @@ figure.isotope-figure {
 }
 
 .section-footer {
+    padding-bottom: 30px;
+    text-align: center;
     color: #fff;
     width: 55%;
     right: 10%;
@@ -291,11 +293,6 @@ html {
         width: 100%;
     }
 
-    .container-google-maps {
-        display: none;
-        visibility: hidden;
-    }
-
     .section-footer {
         text-align: center;
         color: #fff;
@@ -313,5 +310,20 @@ html {
 
     figure.isotope-figure {
         width: 100%;
+    }
+}
+
+/* Match with the iPad resolution */
+@media screen and (max-width: 768px) {
+
+    .container-google-maps {
+        display: none;
+        visibility: hidden;
+    }
+
+    .section-footer {
+        width: 100%;
+        left: unset;
+        right: unset;
     }
 }
