@@ -313,6 +313,14 @@ html {
     }
 }
 
+/* Match with the iPhone X/XS resolution */
+@media screen and (max-width: 375px) {
+
+    .section-logo-xp {
+        text-align: center;
+    }
+}
+
 /* Match with the iPad resolution */
 @media screen and (max-width: 768px) {
 
