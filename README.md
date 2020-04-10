@@ -4,6 +4,7 @@ Here is the repository of [anthony-pillot.com](https://www.anthony-pillot.com/)
 
 Made with (love) **Vue.js** and:
 * Vue.js CLI
+* Vue Router
 * Babel
 * ESLint
 * Prettier
