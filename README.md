@@ -1,4 +1,15 @@
-# anthony-pillot.com
+### Personal website intended to introduce myself and what I'm doing in the IT world.
+
+Here is the repository of [anthony-pillot.com](https://www.anthony-pillot.com/)
+
+Made with (love) **Vue.js** and:
+* Vue.js CLI
+* Vue Router
+* Babel
+* ESLint
+* Prettier
+* CircleCI
+* Cypress
 
 ## Project setup
 ```

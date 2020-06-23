@@ -2,6 +2,14 @@
   "name": "anthony-pillot.com",
   "version": "0.1.0",
   "private": true,
+  "description": "Personal website intended to introduce myself and what I'm doing in the IT world.",
+  "contributors": [
+    {
+      "name": "Anthony Pillot",
+      "email": "pillot.anthony@gmail.com",
+      "url": "https://anthony-pillot.com/"
+    }
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
