@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-row align="center" justify="center">
         <v-img
-          src="@/assets/©-KW-picture-profile.jpg"
+          src="@/assets/picture-profile.jpg"
           aspect-ratio="1"
           class="grey lighten-2"
         ></v-img>
@@ -22,7 +22,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-img
         class="ml-2"
-        src="@/assets/favicon-code.png"
+        src="@/assets/logo/favicon-code.png"
         aspect-ratio="1"
         max-height="50"
         max-width="50"
@@ -55,7 +55,7 @@ export default {
     pages: [
       {
         icon: "fas fa-home",
-        title: "Accueil",
+        title: "Présentation",
         link: "/",
       },
       {
