@@ -48,7 +48,7 @@
 <script>
 export default {
   props: {
-    source: String
+    source: String,
   },
 
   data: () => ({
@@ -56,36 +56,36 @@ export default {
       {
         icon: "fas fa-home",
         title: "Accueil",
-        link: "/"
+        link: "/",
       },
       {
         icon: "fas fa-rocket",
         title: "Projets",
-        link: "/"
+        link: "/",
       },
       {
         icon: "fas fa-blog",
         title: "Blog",
-        link: "/"
+        link: "/",
       },
       {
         icon: "fas fa-mail-bulk",
         title: "Contact",
-        link: "/"
+        link: "/",
       },
       {
         icon: "fas fa-user-circle",
         title: "À propos",
-        link: "/about"
-      }
+        link: "/about",
+      },
     ],
     author: "Anthony PILLOT",
     version: "0.1.0",
-    drawer: null
+    drawer: null,
   }),
 
   created() {
     this.$vuetify.theme.dark = true;
-  }
+  },
 };
 </script>
