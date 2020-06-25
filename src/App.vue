@@ -31,6 +31,16 @@
         <span class="author">{{ author }}</span> -
         <span class="subtitle">IT Developer</span>
       </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <a
+        class="typewrite typewriter"
+        data-period="2000"
+        data-type='[ "Hi, my name is Anthony.", "I like JavaScript so much.", "And I love Node.js. You know.", "Come on ! Do not be shy, talk to me." ]'
+      >
+        <span class="wrap"></span>
+      </a>
     </v-app-bar>
 
     <v-content>
@@ -43,12 +53,20 @@
       <span
         >&copy; {{ getCurrentYear() }} {{ author }}. All rights reserved.</span
       >
-      <span class="ml-auto">Application version: {{ versionNumber }}</span>
+
+      <v-spacer></v-spacer>
+
+      <span>Application version: {{ versionNumber }}</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import Typewriter from "@/views/effects/typewriter";
+
+// apparently, I must do something when I'm importing something, this is the reason why this line exist below.
+Typewriter.activateIt;
+
 export default {
   props: {
     source: String,
@@ -94,6 +112,7 @@ export default {
   }),
 
   created() {
+    //TODO: make a switcher to change when it's wanted.
     this.$vuetify.theme.dark = true;
   },
 };
@@ -102,10 +121,17 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 
+.typewriter {
+  color: white;
+  font-size: 30px;
+  font-family: "Gochi Hand", cursive;
+}
+
 .author {
   font-family: "Gochi Hand", cursive;
   font-size: 30px;
 }
+
 .subtitle {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
