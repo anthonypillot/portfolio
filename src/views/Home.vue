@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Bienvenue sur mon site internet.</h1>
+    <h1>Bienvenue sur mon site internet personnel.</h1>
 
-    <v-carousel cycle height="350" show-arrows-on-hover interval="3000">
+    <v-carousel cycle height="400" show-arrows-on-hover interval="4000">
       <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.src">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-3">{{ slide.text }}</div>
@@ -57,7 +57,12 @@ export default {
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png",
       },
       {
-        text: "Language: JavaScript",
+        text: "The place where I'm postings my works.",
+        src:
+          "https://images.idgesg.net/images/article/2019/02/certification_school_pencils_diversity_creative_team_by-evgeny555-getty-100787956-large.jpg",
+      },
+      {
+        text: "Working on multiple languages and technologies.",
         src:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
       },
