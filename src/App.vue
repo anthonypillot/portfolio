@@ -40,7 +40,9 @@
     </v-content>
 
     <v-footer app>
-      <span>&copy; {{ getCurrentYear() }} {{ author }}.</span>
+      <span
+        >&copy; {{ getCurrentYear() }} {{ author }}. All rights reserved.</span
+      >
       <span class="ml-auto">Application version: {{ versionNumber }}</span>
     </v-footer>
   </v-app>
