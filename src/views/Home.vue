@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import Formation from "@/components/Formation.vue";
-import Experience from "@/components/Experience.vue";
+import Formation from "@/components/home/Formation.vue";
+import Experience from "@/components/home/Experience.vue";
 
 export default {
   name: "Home",
