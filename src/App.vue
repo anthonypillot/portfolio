@@ -8,14 +8,33 @@
           class="grey lighten-2"
         ></v-img>
       </v-row>
-      <v-list nav>
-        <v-list-item v-for="(page, i) in pages" :key="i" :to="page.link" link>
-          <v-list-item-icon>
-            <v-icon>{{ page.icon }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>{{ page.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
+
+      <v-card class="mx-auto" max-width="300" tile>
+        <v-list style="padding: 0px 0;">
+          <v-subheader>MENU PRINCIPAL</v-subheader>
+          <v-list-item-group v-model="item" color="">
+            <v-list-item
+              v-for="(page, i) in pages"
+              :key="i"
+              :to="page.link"
+              link
+            >
+              <v-list-item-icon>
+                <v-icon v-text="page.icon"></v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title v-text="page.title"></v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-card>
+
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn href="/V1" block outlined tile>Ancienne version</v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
 
     <v-app-bar app clipped-left>
@@ -64,7 +83,7 @@
 <script>
 import Typewriter from "@/views/effects/typewriter";
 
-// apparently, I must do something when I'm importing something, this is the reason why this line exist below.
+// I have to do something when I'm importing something, this is the reason why this line exist below.
 Typewriter.activateIt;
 
 export default {
