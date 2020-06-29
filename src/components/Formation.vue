@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h3>Formation :</h3>
+    <h1>Formation :</h1>
 
     <v-col cols="12">
-      <v-row :align="alignment" :justify="justify" style="height: 300px;">
-        <v-card class max-width="500" tile>
-          <v-list disabled dense>
+      <v-row :align="alignment" :justify="justify">
+        <v-card tile>
+          <v-list disabled>
             <v-subheader>
               ÉCOLE D'INFORMATIQUE - 2018 / 2020
               <br />Bachelor - Titre professionnel RNCP - Concepteur Développeur
@@ -21,10 +21,10 @@
           </v-list>
         </v-card>
 
-        <v-divider vertical class="mx-4" />
+        <v-divider vertical class="ma-2" />
 
-        <v-card class max-width="500" tile>
-          <v-list disabled dense>
+        <v-card tile>
+          <v-list disabled>
             <v-subheader>
               UNIVERSITÉ DE LILLE III - CHARLES-DE-GAULLE - 2015 / 2018
               <br />LICENCE de Psychologie, parcours et spécialisation
