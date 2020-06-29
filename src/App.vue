@@ -31,7 +31,14 @@
       </v-card>
 
       <template v-slot:append>
-        <div class="pa-2">
+        <v-switch
+          class="ma-2"
+          v-model="$vuetify.theme.dark"
+          hide-details
+          label="Mode sombre"
+          color="success"
+        ></v-switch>
+        <div class="ma-2">
           <v-btn href="/V1" block outlined tile>Ancienne version</v-btn>
         </div>
       </template>
