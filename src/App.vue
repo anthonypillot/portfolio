@@ -101,7 +101,17 @@ export default {
     pages: [
       {
         icon: "fas fa-home",
-        title: "Présentation",
+        title: "Accueil",
+        link: "/",
+      },
+      {
+        icon: "far fa-window-maximize",
+        title: "Information",
+        link: "/",
+      },
+      {
+        icon: "fas fa-briefcase",
+        title: "Expérience",
         link: "/",
       },
       {
