@@ -7,7 +7,7 @@
         <v-card class max-width="500" tile>
           <v-list disabled dense>
             <v-subheader>
-              ÉCOLE D'INFORMATIQUE 2018 - 2020
+              ÉCOLE D'INFORMATIQUE - 2018 / 2020
               <br />Bachelor - Titre professionnel RNCP - Concepteur Développeur
               d'Application
             </v-subheader>
@@ -26,7 +26,7 @@
         <v-card class max-width="500" tile>
           <v-list disabled dense>
             <v-subheader>
-              UNIVERSITÉ DE LILLE III - CHARLES-DE-GAULLE 2015 - 2018
+              UNIVERSITÉ DE LILLE III - CHARLES-DE-GAULLE - 2015 / 2018
               <br />LICENCE de Psychologie, parcours et spécialisation
               Psychologie du Travail.
             </v-subheader>
