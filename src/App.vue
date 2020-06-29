@@ -59,14 +59,13 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-
-      <a
+      <span
         class="typewrite typewriter"
         data-period="2000"
         data-type='[ "Hi, my name is Anthony.", "I like JavaScript so much.", "And I love Node.js. You know.", "Come on ! Do not be shy, talk to me." ]'
       >
         <span class="wrap"></span>
-      </a>
+      </span>
     </v-app-bar>
 
     <v-content>
@@ -148,7 +147,6 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 
 .typewriter {
-  color: white;
   font-size: 30px;
   font-family: "Gochi Hand", cursive;
 }
