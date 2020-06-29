@@ -57,7 +57,7 @@ export default {
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png",
       },
       {
-        text: "The place where I'm postings my works.",
+        text: "The place where I'm posting my works.",
         src:
           "https://images.idgesg.net/images/article/2019/02/certification_school_pencils_diversity_creative_team_by-evgeny555-getty-100787956-large.jpg",
       },
