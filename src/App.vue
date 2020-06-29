@@ -78,9 +78,7 @@
       <span
         >&copy; {{ getCurrentYear() }} {{ author }}. All rights reserved.</span
       >
-
       <v-spacer></v-spacer>
-
       <span>Application version: {{ versionNumber }}</span>
     </v-footer>
   </v-app>
