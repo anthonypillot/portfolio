@@ -24,7 +24,12 @@
 
         <v-list-item v-for="(content, i) in experience.contents" :key="i">
           <v-list-item-content>
-            <v-list-item-title>{{ content.title }}</v-list-item-title>
+            <v-list-item-title
+              >{{ content.title }}
+              <v-icon class="ml-1" large>{{
+                content.icon
+              }}</v-icon></v-list-item-title
+            >
             <v-list-item-subtitle>
               {{ content.contentSubtitle }}
             </v-list-item-subtitle>
@@ -56,9 +61,10 @@ export default {
         period: "Avril 2020 - Aujourd'hui",
         contents: [
           {
-            title: "Contenu de l'expérience de consultant chez Zenika",
+            icon: "fab fa-node-js",
+            title: "JavaScript, TypeScript et Node.js",
             contentSubtitle:
-              "Sous-contenu de l'expérience de consultant chez Zenika.",
+              "Langages utilisés dans le développement des applications",
           },
         ],
       },
@@ -70,32 +76,37 @@ export default {
         period: "Janvier 2020 - Avril 2020",
         contents: [
           {
+            icon: "fab fa-docker",
             title: "Docker",
             contentSubtitle:
               "Développement de scripts SQL pour une création rapide de la base de données",
           },
           {
+            icon: "fas fa-database",
             title: "PostgreSQL",
             contentSubtitle:
               "Développement de la base de données relationnelle sous Docker",
           },
           {
-            title: "Node.js, JavaScript et TypeScript",
+            icon: "fab fa-js",
+            title: "JavaScript, TypeScript et Node.js",
             contentSubtitle:
               "Langages utilisés dans le développement des applications",
           },
           {
+            icon: "fas fa-cogs",
             title: "NestJS, en TypeScript",
             contentSubtitle:
               "Framework basé sur Express, conçu pour créer des micro-services en TypeScript, avec le moteur de Node.js",
           },
           {
+            icon: "fab fa-vuejs",
             title: "Vue.js",
             contentSubtitle:
               "Pour le front, avec Vuetify en guise de bibliothèque utilisateur",
           },
           {
-            title: "Technologies supplémentaires",
+            title: "Technologies supplémentaires :",
             contentSubtitle:
               "CircleCI pour la CI, Cypress (E2E tests), ESLint, WebSocket (Socket.IO)",
           },
