@@ -54,15 +54,15 @@
         max-width="50"
       ></v-img>
       <v-toolbar-title class="ml-6">
-        <span class="author">{{ author }}</span> -
-        <span class="subtitle">IT Developer</span>
+        <span class="author">{{ author }}</span>
+        <span class="subtitle"> - Consultant Développeur informatique</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
       <span
         class="typewrite typewriter"
         data-period="2000"
-        data-type='[ "Hi, my name is Anthony.", "I like JavaScript so much.", "And I love Node.js. You know.", "Come on ! Do not be shy, talk to me." ]'
+        data-type='[ "Hi, my name is Anthony.", "I like JavaScript so much.", "And I love Node.js. You know.", "Come on ! Do not be shy, talk to me. (In the contact section !)" ]'
       >
         <span class="wrap"></span>
       </span>
@@ -112,7 +112,7 @@ export default {
       {
         icon: "fas fa-briefcase",
         title: "Expérience",
-        link: "/",
+        link: "/experience",
       },
       {
         icon: "fas fa-rocket",
