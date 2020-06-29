@@ -28,27 +28,13 @@
       Travail en équipe. Avenant. Passionné. Autodidacte. Autonome.
       Anticipation. Organisation d'une équipe de travail. Veille technologique.
     </span>
-
-    <v-divider class="my-4"></v-divider>
-
-    <Experience></Experience>
-
-    <v-divider class="my-4"></v-divider>
-
-    <Formation></Formation>
   </div>
 </template>
 
 <script>
-import Formation from "@/components/home/Formation.vue";
-import Experience from "@/components/home/Experience.vue";
-
 export default {
   name: "Home",
-  components: {
-    Formation,
-    Experience,
-  },
+  components: {},
   data: () => ({
     slides: [
       {
