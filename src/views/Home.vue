@@ -28,15 +28,25 @@
 
     <v-divider class="my-4"></v-divider>
 
-    <h2>Compétences clés :</h2>
-    <p>
-      Avenant. Passionné. Autodidacte. Autonome. Anticipation. Organisation
-      d'une équipe de travail. Veille technologique.
-    </p>
+    <div>
+      <h2>Compétences clés :</h2>
+      <p>
+        Avenant. Passionné. Autodidacte. Autonome. Anticipation. Organisation
+        d'une équipe de travail. Veille technologique.
+      </p>
+    </div>
+
+    <div v-for="(image, i) in parallaxs" :key="i">
+      <v-parallax height="200" :src="image.url" :alt="image.alt"></v-parallax>
+      <v-divider class="my-4"></v-divider>
+    </div>
   </div>
 </template>
 
 <script>
+const notFoundUrlImage =
+  "https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400006/100130939-error-404-page-not-found-error-with-glitch-effect-on-screen-vector-illustration-for-your-design-.jpg";
+
 export default {
   name: "Home",
   components: {},
@@ -76,6 +86,27 @@ export default {
         text: "Database: SQL & NoSQL",
         src:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+      },
+    ],
+
+    parallaxs: [
+      {
+        url:
+          "https://cdn-images-1.medium.com/max/1600/1*-xlCG5r86ocNFhC5iE658A.jpeg",
+        alt: notFoundUrlImage,
+      },
+      {
+        url:
+          "https://c.wallhere.com/photos/f3/de/code_web_development_JavaScript_Computer_screen_pixels_programming_PHP_syntax_highlighting-5068.jpg!d",
+        alt: "",
+      },
+      {
+        url: "@/assets/wallpapers/heroku_dashboard.png",
+        alt: "",
+      },
+      {
+        url: "",
+        alt: notFoundUrlImage,
       },
     ],
   }),
