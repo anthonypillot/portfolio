@@ -39,7 +39,7 @@
     </v-card>
 
     <v-divider class="my-4"></v-divider>
-    <Formation></Formation>
+    <Formation />
   </div>
 </template>
 
