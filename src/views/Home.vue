@@ -10,7 +10,7 @@
 
     <v-divider class="my-4"></v-divider>
 
-    <h1>Présentation :</h1>
+    <h2>Présentation :</h2>
     <p>
       Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la
       vie : la high technology, ma passion depuis toujours. Amoureux d'Apple, de
@@ -29,42 +29,94 @@
     <v-divider class="my-4"></v-divider>
 
     <div>
-      <h2>Compétences clés :</h2>
+      <h3>Compétences clés :</h3>
       <p>
         Avenant. Passionné. Autodidacte. Autonome. Anticipation. Organisation
         d'une équipe de travail. Veille technologique.
       </p>
     </div>
     <v-divider class="my-4"></v-divider>
-    <h1>
+    <h2>
       Les technogies présentées et utilisées dans ce site internet :
-    </h1>
+    </h2>
     <v-divider class="my-4"></v-divider>
 
-    <h3 class="mb-1">Heroku :</h3>
-    <p>
-      Ce site internet est hébergé sur Heroku. Heroku est utilisé pour donner un
-      apperçu de ma branche <code>developer</code> et des nouvelles features que
-      mon site peut proposer.
+    <div>
+      <h3 class="mb-1">GitHub :</h3>
+      <p>
+        Le code source de mon application web est disponible
+        <span class="font-italic">(bientôt)</span> en OpenSource, celles et ceux
+        qui veulent y participer peuvent d'hors et déjà le faire.
+      </p>
+      <v-parallax
+        height="200"
+        src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
+            <span class=""
+              >The world's leading software development platform</span
+            >
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">Vue.js :</h3>
+      <p>
+        Ce site web a été conçu comme une application ou SPA
+        <span class="font-italic">
+          (Single Page Application)
+        </span>
+        avec Vue.js pour être plus polyvalent et répondre à des besoins futurs.
+      </p>
+      <v-parallax
+        height="200"
+        src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
+            <span class="">Advanced front-end framework</span>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">Heroku :</h3>
+      <span>
+        Une démonstration des mises à jour futur de ce site internet est hébergé
+        sur Heroku qui est utilisé pour donner un aperçu de ma branche
+        <code>developer</code> et des nouvelles features que mon site peut et
+        pourra proposer.
+      </span>
       <v-btn
+        class="white--text"
         href="https://anthony-pillot.herokuapp.com/"
         target="_blank"
         tile
         color="deep-purple"
         >Heroku demo</v-btn
       >
-    </p>
-    <v-parallax
-      height="200"
-      :src="require('@/assets/parallaxs/heroku_dashboard.png')"
-    >
-      <v-row align="center" justify="center">
-        <v-col class="text-center" cols="12">
-          <h1 class="display-4 font-weight-thin mb-4 black--text">Heroku</h1>
-          <span class="black--text">Demonstration website</span>
-        </v-col>
-      </v-row>
-    </v-parallax>
+      <v-parallax
+        height="200"
+        :src="require('@/assets/parallaxs/heroku_dashboard.png')"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4 black--text">Heroku</h1>
+            <span class="black--text">Demonstration website</span>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
 
     <v-divider class="my-4"></v-divider>
   </div>
