@@ -63,7 +63,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-img
         class="ml-4"
-        src="@/assets/logo/programming.svg"
+        src="@/assets/logos/programming.svg"
         aspect-ratio="1"
         max-height="50"
         max-width="50"
@@ -158,8 +158,7 @@ export default {
   }),
 
   created() {
-    //TODO: make a switcher to change when it's wanted.
-    this.$vuetify.theme.dark = true;
+    this.$vuetify.theme.dark = false;
   },
 };
 </script>

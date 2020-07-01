@@ -35,19 +35,38 @@
         d'une équipe de travail. Veille technologique.
       </p>
     </div>
-
+    <v-divider class="my-4"></v-divider>
+    <h1>
+      Les technogies présentées et utilisées dans ce site internet :
+    </h1>
     <v-divider class="my-4"></v-divider>
 
-    <div v-for="(element, i) in parallaxElements" :key="i">
-      <h3 class="mb-1">{{ element.technology }}</h3>
-      <p>{{ element.text }}</p>
-      <v-parallax
-        height="200"
-        :src="element.url"
-        :alt="element.alt"
-      ></v-parallax>
-      <v-divider class="my-4"></v-divider>
-    </div>
+    <h3 class="mb-1">Heroku :</h3>
+    <p>
+      Ce site internet est hébergé sur Heroku. Heroku est utilisé pour donner un
+      apperçu de ma branche <code>developer</code> et des nouvelles features que
+      mon site peut proposer.
+      <v-btn
+        href="https://anthony-pillot.herokuapp.com/"
+        target="_blank"
+        tile
+        color="deep-purple"
+        >Heroku demo</v-btn
+      >
+    </p>
+    <v-parallax
+      height="200"
+      :src="require('@/assets/parallaxs/heroku_dashboard.png')"
+    >
+      <v-row align="center" justify="center">
+        <v-col class="text-center" cols="12">
+          <h1 class="display-4 font-weight-thin mb-4 black--text">Heroku</h1>
+          <span class="black--text">Demonstration website</span>
+        </v-col>
+      </v-row>
+    </v-parallax>
+
+    <v-divider class="my-4"></v-divider>
   </div>
 </template>
 
@@ -58,9 +77,8 @@ export default {
   data: () => ({
     slides: [
       {
-        text: "New website 2.0 released !",
-        src:
-          "https://www.madewithmaturity.com/wp-content/uploads/2019/08/website-launch-v1.jpg",
+        text: "New version 2.0 of the site available!",
+        src: "https://picsum.photos/id/2/1920/1080?blur=1",
       },
       {
         text: "Made with love and Vue.js",
