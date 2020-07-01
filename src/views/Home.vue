@@ -11,20 +11,19 @@
     <v-divider class="my-4"></v-divider>
 
     <h2>Présentation :</h2>
-    <p>
-      Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la
-      vie : la high technology, ma passion depuis toujours. Amoureux d'Apple, de
-      Windows (c'est possible !) de Linux, avec mon serveur personnel sous
-      Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient !
-    </p>
-    <p>
-      Ayant commencé sur Java, JEE et son écosystème, je travaille aujourd'hui
-      dans l'écosystème JavaScript, TypeScript, ainsi que Node.js et Vue.js.
-    </p>
-    <p>
-      Je travaille également sur la conception de base de données en SQL avec
-      PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.
-    </p>
+
+    <v-row no-gutters>
+      <v-col
+        v-for="(presentation, i) in presentations"
+        :key="i"
+        cols="12"
+        sm="4"
+      >
+        <v-card class="ma-1 pa-2" outlined tile>
+          {{ presentation.text }}
+        </v-card>
+      </v-col>
+    </v-row>
 
     <v-divider class="my-4"></v-divider>
 
@@ -127,6 +126,26 @@ export default {
   name: "Home",
   components: {},
   data: () => ({
+    presentations: [
+      {
+        text:
+          "Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la vie : \
+          la high technology, ma passion depuis toujours. Amoureux d'Apple, de Windows (c'est possible !) de Linux,\
+           avec mon serveur personnel sous Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient !",
+      },
+      {
+        text:
+          "Ayant commencé sur Java, JEE et son écosystème, je travaille\
+            aujourd'hui dans l'écosystème JavaScript, TypeScript, ainsi que\
+            Node.js et Vue.js.",
+      },
+      {
+        text:
+          "Je travaille également sur la conception de base de données en SQL\
+          avec PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.",
+      },
+    ],
+
     slides: [
       {
         text: "New version 2.0 of the site available!",
