@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import Formation from "@/components/Formation";
+import Formation from "@/components/experience/Formation";
 
 export default {
   name: "Experience",

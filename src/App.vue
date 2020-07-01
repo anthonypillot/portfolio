@@ -103,7 +103,7 @@
 </template>
 
 <script>
-import Typewriter from "@/views/effects/typewriter";
+import Typewriter from "@/assets/effects/typewriter";
 
 // I have to do something when I'm importing something, this is the reason why this line exist below.
 Typewriter.activateIt;
