@@ -12,26 +12,84 @@
 
     <h2>Présentation :</h2>
 
-    <v-row no-gutters>
-      <v-col
-        v-for="(presentation, i) in presentations"
-        :key="i"
-        cols="12"
-        sm="4"
-      >
-        <v-card class="ma-1 pa-2" outlined tile>
-          {{ presentation.text }}
-        </v-card>
-      </v-col>
-    </v-row>
+    <v-card class="pa-2" outlined tile>
+      Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la
+      vie : la high technology, ma passion depuis toujours. Amoureux d'Apple, de
+      Windows (c'est possible !) de Linux, avec mon serveur personnel sous
+      Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient.
+      <v-spacer />
+      Ayant commencé sur Java, JEE et son écosystème, je travaille aujourd'hui
+      dans l'écosystème JavaScript, TypeScript, ainsi que Node.js et Vue.js. Je
+      travaille également sur la conception de base de données en SQL avec
+      PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.
+    </v-card>
+
+    <!-- <v-container class="mt-3 pa-1 grey lighten-5"> -->
+    <div class="mt-3">
+      <h3>
+        Langages utilisés en autonomie :
+      </h3>
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in learnedLanguages" :key="svgIcon">
+          <v-card class="pa-2" outlined tile>
+            <v-row justify="center">
+              <v-img aspect-ratio="10" :src="svgIcon.src" contain />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+    <!-- </v-container> -->
+
+    <div class="mt-3">
+      <h3>
+        Langages en cours d'apprentissage ou surveillés :
+      </h3>
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in learningLanguages" :key="svgIcon">
+          <v-card class="pa-2" outlined tile>
+            <v-row justify="center">
+              <v-img aspect-ratio="10" :src="svgIcon.src" contain />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+
+    <div class="mt-3">
+      <h3>
+        Outils et technologies utilisées :
+      </h3>
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in toolsFirstPart" :key="svgIcon">
+          <v-card class="pa-2" outlined tile>
+            <v-row justify="center">
+              <v-img aspect-ratio="10" :src="svgIcon.src" contain />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+
+    <div class="mt-3">
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in toolsSecondPart" :key="svgIcon">
+          <v-card class="pa-2" outlined tile>
+            <v-row justify="center">
+              <v-img aspect-ratio="10" :src="svgIcon.src" contain />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
 
     <v-divider class="my-4"></v-divider>
 
     <div>
       <h3>Compétences clés :</h3>
       <p>
-        Avenant. Passionné. Autodidacte. Autonome. Anticipation. Organisation
-        d'une équipe de travail. Veille technologique.
+        Avenant. Passionné. Autodidacte. Autonome. Anticipation. Veille
+        technologique.
       </p>
     </div>
     <v-divider class="my-4"></v-divider>
@@ -126,26 +184,6 @@ export default {
   name: "Home",
   components: {},
   data: () => ({
-    presentations: [
-      {
-        text:
-          "Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la vie : \
-          la high technology, ma passion depuis toujours. Amoureux d'Apple, de Windows (c'est possible !) de Linux,\
-           avec mon serveur personnel sous Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient !",
-      },
-      {
-        text:
-          "Ayant commencé sur Java, JEE et son écosystème, je travaille\
-            aujourd'hui dans l'écosystème JavaScript, TypeScript, ainsi que\
-            Node.js et Vue.js.",
-      },
-      {
-        text:
-          "Je travaille également sur la conception de base de données en SQL\
-          avec PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.",
-      },
-    ],
-
     slides: [
       {
         text: "New version 2.0 of the site available!",
@@ -172,14 +210,94 @@ export default {
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
       },
       {
-        text: "Blog on JavaScript, Node.js, Java",
+        text: "Work with JavaScript, Node.js, Java",
         src:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+          "http://incurs.us/sites/default/files/2016-08/nodejs-wallpaper-1_0.png",
       },
       {
         text: "Database: SQL & NoSQL",
+        src: "https://wallpapercave.com/wp/wp2347550.jpg",
+      },
+    ],
+
+    learnedLanguages: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+      },
+    ],
+
+    learningLanguages: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/swift-15.svg",
+      },
+      {
         src:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+          "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/c--4.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/go-6.svg",
+      },
+    ],
+
+    toolsFirstPart: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/vue-js-1.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/vuetify.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/visual-studio-code.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/intellij-idea-1.svg",
+      },
+    ],
+
+    toolsSecondPart: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/docker-1.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/webpack-icon.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/microsoft-sql-server.svg",
+      },
+    ],
+
+    presentations: [
+      {
+        text:
+          "Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la vie : \
+          la high technology, ma passion depuis toujours. Amoureux d'Apple, de Windows (c'est possible !) de Linux,\
+           avec mon serveur personnel sous Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient !",
+      },
+      {
+        text:
+          "Ayant commencé sur Java, JEE et son écosystème, je travaille\
+            aujourd'hui dans l'écosystème JavaScript, TypeScript, ainsi que\
+            Node.js et Vue.js.",
+      },
+      {
+        text:
+          "Je travaille également sur la conception de base de données en SQL\
+          avec PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.",
       },
     ],
   }),

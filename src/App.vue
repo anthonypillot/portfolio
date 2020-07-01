@@ -4,7 +4,7 @@
       <v-row align="center" justify="center">
         <v-img
           src="@/assets/picture-profile.jpg"
-          aspect-ratio="1"
+          aspect-ratio="0.9"
           class="grey lighten-2"
         ></v-img>
       </v-row>
@@ -86,7 +86,7 @@
     </v-app-bar>
 
     <v-content>
-      <v-container class fluid>
+      <v-container fluid>
         <router-view />
       </v-container>
     </v-content>
