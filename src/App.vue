@@ -10,15 +10,20 @@
       </v-row>
 
       <div class="hidden-sm-and-up">
-        <v-switch
+        <!-- <v-switch
           class="ma-2"
           v-model="$vuetify.theme.dark"
           hide-details
           label="Mode sombre"
           color="success"
-        ></v-switch>
+        ></v-switch> -->
+        <v-row class="ma-2" justify="center">
+          <v-btn block outlined tile v-on:click="toggle_dark_mode"
+            >Light or Dark Mode</v-btn
+          >
+        </v-row>
         <div class="ma-2">
-          <v-btn href="/v1" block outlined tile>Ancienne version</v-btn>
+          <v-btn href="/v1" block tile>Ancienne version</v-btn>
         </div>
       </div>
 
@@ -43,17 +48,24 @@
         </v-list>
       </v-card>
 
+      <v-card class="mx-auto hidden-sm-and-up" min-height="50" tile />
+
       <template v-slot:append>
         <div class="hidden-sm-and-down">
-          <v-switch
+          <!-- <v-switch
             class="ma-2"
             v-model="$vuetify.theme.dark"
             hide-details
             label="Mode sombre"
             color="success"
-          ></v-switch>
+          ></v-switch> -->
+          <v-row class="ma-2" justify="center">
+            <v-btn block outlined tile v-on:click="toggle_dark_mode"
+              >Light or Dark Mode</v-btn
+            >
+          </v-row>
           <div class="ma-2">
-            <v-btn href="/v1" block outlined tile>Ancienne version</v-btn>
+            <v-btn href="/v1" block tile>Ancienne version</v-btn>
           </div>
         </div>
       </template>
@@ -159,6 +171,25 @@ export default {
 
   created() {
     this.$vuetify.theme.dark = true;
+  },
+
+  methods: {
+    toggle_dark_mode: function () {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+      return this.$vuetify.theme.dark;
+    },
+  },
+
+  mounted() {
+    const theme = localStorage.getItem("dark_theme");
+    if (theme) {
+      if (theme == "true") {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
+    }
   },
 };
 </script>
