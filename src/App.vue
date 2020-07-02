@@ -4,10 +4,28 @@
       <v-row align="center" justify="center">
         <v-img
           src="@/assets/picture-profile.jpg"
-          aspect-ratio="1"
+          aspect-ratio="0.9"
           class="grey lighten-2"
         ></v-img>
       </v-row>
+
+      <div class="hidden-sm-and-up">
+        <!-- <v-switch
+          class="ma-2"
+          v-model="$vuetify.theme.dark"
+          hide-details
+          label="Mode sombre"
+          color="success"
+        ></v-switch> -->
+        <v-row class="ma-2" justify="center">
+          <v-btn block outlined tile v-on:click="toggle_dark_mode"
+            >Light or Dark Mode</v-btn
+          >
+        </v-row>
+        <div class="ma-2">
+          <v-btn href="/v1" block tile>Ancienne version</v-btn>
+        </div>
+      </div>
 
       <v-card class="mx-auto" max-width="300" tile>
         <v-list style="padding: 0px 0;">
@@ -30,16 +48,25 @@
         </v-list>
       </v-card>
 
+      <v-card class="mx-auto hidden-sm-and-up" min-height="50" tile />
+
       <template v-slot:append>
-        <v-switch
-          class="ma-2"
-          v-model="$vuetify.theme.dark"
-          hide-details
-          label="Mode sombre"
-          color="success"
-        ></v-switch>
-        <div class="ma-2">
-          <v-btn href="/v1" block outlined tile>Ancienne version</v-btn>
+        <div class="hidden-sm-and-down">
+          <!-- <v-switch
+            class="ma-2"
+            v-model="$vuetify.theme.dark"
+            hide-details
+            label="Mode sombre"
+            color="success"
+          ></v-switch> -->
+          <v-row class="ma-2" justify="center">
+            <v-btn block outlined tile v-on:click="toggle_dark_mode"
+              >Light or Dark Mode</v-btn
+            >
+          </v-row>
+          <div class="ma-2">
+            <v-btn href="/v1" block tile>Ancienne version</v-btn>
+          </div>
         </div>
       </template>
     </v-navigation-drawer>
@@ -48,35 +75,38 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-img
         class="ml-4"
-        src="@/assets/logo/programming.svg"
+        src="@/assets/logos/programming.svg"
         aspect-ratio="1"
         max-height="50"
         max-width="50"
       ></v-img>
       <v-toolbar-title class="ml-6">
         <span class="author">{{ author }}</span>
-        <span class="subtitle"> - Consultant Développeur informatique</span>
+        <span class="subtitle"> - Consultant Développeur Informatique</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <span
-        class="typewrite typewriter"
-        data-period="2000"
-        data-type='[ "Hi, my name is Anthony.", "I like JavaScript so much.", "And I love Node.js. You know.", "Come on ! Do not be shy, talk to me. (In the contact section !)" ]'
-      >
-        <span class="wrap"></span>
-      </span>
+      <div class="hidden-md-and-down">
+        <span
+          class="typewrite typewriter"
+          data-period="2000"
+          data-type='[ "Hi, my name is Anthony.", "I like JavaScript so much.", "And I love Node.js. You know.", "Come on ! Do not be shy, talk to me." ]'
+        >
+          <span class="wrap"></span>
+        </span>
+      </div>
     </v-app-bar>
 
     <v-content>
-      <v-container class fluid>
+      <v-container fluid>
         <router-view />
       </v-container>
     </v-content>
 
     <v-footer app>
       <span
-        >&copy; {{ getCurrentYear() }} {{ author }}. All rights reserved.</span
+        >&copy; {{ new Date().getFullYear() }} {{ author }}. All rights
+        reserved.</span
       >
       <v-spacer></v-spacer>
       <span>Application version: {{ versionNumber }}</span>
@@ -85,7 +115,7 @@
 </template>
 
 <script>
-import Typewriter from "@/views/effects/typewriter";
+import Typewriter from "@/assets/effects/typewriter";
 
 // I have to do something when I'm importing something, this is the reason why this line exist below.
 Typewriter.activateIt;
@@ -134,19 +164,32 @@ export default {
       },
     ],
 
-    getCurrentYear() {
-      let currentYear = new Date();
-      return currentYear.getFullYear();
-    },
-
     author: "Anthony PILLOT",
     versionNumber: "0.1.0",
     drawer: null,
   }),
 
   created() {
-    //TODO: make a switcher to change when it's wanted.
     this.$vuetify.theme.dark = true;
+  },
+
+  methods: {
+    toggle_dark_mode: function () {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+      return this.$vuetify.theme.dark;
+    },
+  },
+
+  mounted() {
+    const theme = localStorage.getItem("dark_theme");
+    if (theme) {
+      if (theme == "true") {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
+    }
   },
 };
 </script>

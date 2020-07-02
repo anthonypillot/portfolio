@@ -1,33 +1,199 @@
 <template>
   <div>
-    <h1>Bienvenue sur mon site internet personnel.</h1>
-
     <v-carousel cycle height="350" show-arrows-on-hover interval="5000">
       <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.src">
         <v-row class="fill-height" align="center" justify="center">
-          <div class="display-3">{{ slide.text }}</div>
+          <div class="display-2 hidden-sm-and-down">{{ slide.text }}</div>
         </v-row>
       </v-carousel-item>
     </v-carousel>
 
     <v-divider class="my-4"></v-divider>
 
-    <h1>Présentation :</h1>
-    <span>
-      Ayant commencé sur Java, je travaille aujourd'hui dans l'écosystème
-      JavaScript, avec Node.js et Vue.js.
-    </span>
-    <br />
-    <span>SQL avec PostgreSQL, NoSQL avec MongoDB.</span>
-    <v-spacer />
+    <h2>Présentation :</h2>
+
+    <v-card class="pa-2" outlined tile>
+      Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la
+      vie : la high technology, ma passion depuis toujours. Amoureux d'Apple, de
+      Windows (c'est possible !) de Linux, avec mon serveur personnel sous
+      Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient.
+      <v-spacer />
+      Ayant commencé sur Java, JEE et son écosystème, je travaille aujourd'hui
+      dans l'écosystème JavaScript, TypeScript, ainsi que Node.js et Vue.js. Je
+      travaille également sur la conception de base de données en SQL avec
+      PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.
+    </v-card>
+
+    <div class="mt-3">
+      <h3>
+        Langages utilisés en autonomie :
+      </h3>
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in learnedLanguages" :key="svgIcon">
+          <v-card class="pa-2 grey lighten-1" outlined tile>
+            <v-row justify="center">
+              <v-img
+                class="roll-in-blurred-right"
+                aspect-ratio="10"
+                :src="svgIcon.src"
+                contain
+              />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+
+    <div class="mt-3">
+      <h3>
+        Langages en cours d'apprentissage ou surveillés :
+      </h3>
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in learningLanguages" :key="svgIcon">
+          <v-card class="pa-2 grey lighten-1" outlined tile>
+            <v-row justify="center">
+              <v-img
+                class="roll-in-blurred-right2"
+                aspect-ratio="10"
+                :src="svgIcon.src"
+                contain
+              />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+
+    <div class="mt-3">
+      <h3>
+        Outils et technologies utilisées :
+      </h3>
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in toolsFirstPart" :key="svgIcon">
+          <v-card class="pa-2 grey lighten-1" outlined tile>
+            <v-row justify="center">
+              <v-img
+                class="roll-in-blurred-right3"
+                aspect-ratio="10"
+                :src="svgIcon.src"
+                contain
+              />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+
+    <div class="mt-3">
+      <v-row no-gutters>
+        <v-col v-for="svgIcon in toolsSecondPart" :key="svgIcon">
+          <v-card class="pa-2 grey lighten-1" outlined tile>
+            <v-row justify="center">
+              <v-img
+                class="roll-in-blurred-right4"
+                aspect-ratio="10"
+                :src="svgIcon.src"
+                contain
+              />
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
 
     <v-divider class="my-4"></v-divider>
 
-    <h2>Compétences clés :</h2>
-    <span>
-      Travail en équipe. Avenant. Passionné. Autodidacte. Autonome.
-      Anticipation. Organisation d'une équipe de travail. Veille technologique.
-    </span>
+    <div>
+      <h3>Compétences clés :</h3>
+      <p>
+        Avenant. Passionné. Autodidacte. Autonome. Anticipation. Veille
+        technologique.
+      </p>
+    </div>
+    <v-divider class="my-4"></v-divider>
+    <h2>
+      Les technogies présentées et utilisées dans ce site internet :
+    </h2>
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">GitHub :</h3>
+      <p>
+        Le code source de mon application web est disponible
+        <span class="font-italic">(bientôt)</span> en OpenSource, celles et ceux
+        qui veulent y participer peuvent d'hors et déjà le faire.
+      </p>
+      <v-parallax
+        height="200"
+        src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
+            <span class=""
+              >The world's leading software development platform</span
+            >
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">Vue.js :</h3>
+      <p>
+        Ce site web a été conçu comme une application ou SPA
+        <span class="font-italic">
+          (Single Page Application)
+        </span>
+        avec Vue.js pour être plus polyvalent et répondre à des besoins futurs.
+      </p>
+      <v-parallax
+        height="200"
+        src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
+            <span class="">Advanced front-end framework</span>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">Heroku :</h3>
+      <span>
+        Une démonstration des mises à jour futur de ce site internet est hébergé
+        sur Heroku qui est utilisé pour donner un aperçu de ma branche
+        <code>developer</code> et des nouvelles features que mon site peut et
+        pourra proposer.
+      </span>
+      <v-btn
+        class="mb-1 white--text"
+        href="https://anthony-pillot.herokuapp.com/"
+        target="_blank"
+        tile
+        color="deep-purple"
+        >Heroku demo</v-btn
+      >
+      <v-parallax
+        height="200"
+        :src="require('@/assets/parallaxs/heroku_dashboard.png')"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4 black--text">Heroku</h1>
+            <span class="black--text">Demonstration website</span>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
   </div>
 </template>
 
@@ -38,9 +204,8 @@ export default {
   data: () => ({
     slides: [
       {
-        text: "New website 2.0 released !",
-        src:
-          "https://www.madewithmaturity.com/wp-content/uploads/2019/08/website-launch-v1.jpg",
+        text: "New version 2.0 of the site available!",
+        src: "https://picsum.photos/id/2/1920/1080?blur=1",
       },
       {
         text: "Made with love and Vue.js",
@@ -53,26 +218,177 @@ export default {
           "https://images.idgesg.net/images/article/2019/02/certification_school_pencils_diversity_creative_team_by-evgeny555-getty-100787956-large.jpg",
       },
       {
-        text: "",
+        text: "Dark mode available",
         src:
           "https://image.winudf.com/v2/image1/Y29tLnJpYmJ5dGUuZGFya21vZGUuZmIucHJvX3NjcmVlbl8wXzE1NjUyOTUwNzlfMDMx/screen-0.jpg?fakeurl=1&type=.jpg",
       },
       {
-        text: "Working on multiple languages and technologies",
+        text: "Working on multiple languages",
         src:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
       },
       {
-        text: "Blog on JavaScript, Node.js, Java",
+        text: "Work with JavaScript, Node.js, Java",
         src:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+          "http://incurs.us/sites/default/files/2016-08/nodejs-wallpaper-1_0.png",
       },
       {
         text: "Database: SQL & NoSQL",
+        src: "https://wallpapercave.com/wp/wp2347550.jpg",
+      },
+    ],
+
+    learnedLanguages: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+      },
+    ],
+
+    learningLanguages: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/swift-15.svg",
+      },
+      {
         src:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+          "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/c--4.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/go-6.svg",
+      },
+    ],
+
+    toolsFirstPart: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/vue-js-1.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/vuetify.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/visual-studio-code.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/intellij-idea-1.svg",
+      },
+    ],
+
+    toolsSecondPart: [
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/docker-1.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/webpack-icon.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+      },
+      {
+        src: "https://cdn.worldvectorlogo.com/logos/microsoft-sql-server.svg",
+      },
+    ],
+
+    presentations: [
+      {
+        text:
+          "Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la vie : \
+          la high technology, ma passion depuis toujours. Amoureux d'Apple, de Windows (c'est possible !) de Linux,\
+           avec mon serveur personnel sous Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient !",
+      },
+      {
+        text:
+          "Ayant commencé sur Java, JEE et son écosystème, je travaille\
+            aujourd'hui dans l'écosystème JavaScript, TypeScript, ainsi que\
+            Node.js et Vue.js.",
+      },
+      {
+        text:
+          "Je travaille également sur la conception de base de données en SQL\
+          avec PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.",
       },
     ],
   }),
 };
 </script>
+
+<style scoped>
+.roll-in-blurred-right {
+  -webkit-animation: roll-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: roll-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.roll-in-blurred-right2 {
+  -webkit-animation: roll-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: roll-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.roll-in-blurred-right3 {
+  -webkit-animation: roll-in-blurred-right 3s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: roll-in-blurred-right 3s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.roll-in-blurred-right4 {
+  -webkit-animation: roll-in-blurred-right 4s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: roll-in-blurred-right 4s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-7-2 1:31:53
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation roll-in-blurred-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes roll-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) rotate(720deg);
+    transform: translateX(1000px) rotate(720deg);
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) rotate(720deg);
+    transform: translateX(1000px) rotate(720deg);
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+</style>

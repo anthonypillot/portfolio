@@ -39,12 +39,12 @@
     </v-card>
 
     <v-divider class="my-4"></v-divider>
-    <Formation></Formation>
+    <Formation />
   </div>
 </template>
 
 <script>
-import Formation from "@/components/Formation";
+import Formation from "@/components/experience/Formation";
 
 export default {
   name: "Experience",

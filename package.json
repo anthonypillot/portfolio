@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "Personal website intended to introduce myself and what I'm doing in the IT world.",
+  "author": {
+    "name": "Anthony Pillot",
+    "email": "pillot.anthony@gmail.com",
+    "url": "https://anthony-pillot.com/"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -12,13 +17,13 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/polyfill": "^7.10.4",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuetify": "^2.3.2",
-    "vuex": "^3.4.0"
+    "vuetify": "^2.3.3",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
@@ -41,11 +46,6 @@
     "vue-template-compiler": "^2.6.11"
   },
   "contributors": [
-    {
-      "name": "Anthony Pillot",
-      "email": "pillot.anthony@gmail.com",
-      "url": "https://anthony-pillot.com/"
-    }
   ],
   "gitHooks": {
     "pre-commit": "lint-staged"
