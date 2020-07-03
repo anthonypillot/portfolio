@@ -48,10 +48,11 @@
         </v-list>
       </v-card>
 
-      <v-card class="mx-auto hidden-sm-and-up" min-height="50" tile />
+      <!-- used to raise the drawer size on mobile screen -->
+      <v-card class="mx-auto d-flex d-sm-none" min-height="50" tile />
 
       <template v-slot:append>
-        <div class="hidden-sm-and-down">
+        <div class="hidden-xs-only">
           <!-- <v-switch
             class="ma-2"
             v-model="$vuetify.theme.dark"
@@ -82,7 +83,9 @@
       ></v-img>
       <v-toolbar-title class="ml-6">
         <span class="author">{{ author }}</span>
-        <span class="subtitle"> - Consultant Développeur Informatique</span>
+        <span class="subtitle hidden-sm-and-down">
+          - Consultant Développeur Informatique</span
+        >
       </v-toolbar-title>
 
       <v-spacer></v-spacer>

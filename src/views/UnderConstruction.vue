@@ -1,11 +1,11 @@
 <template>
   <v-container fluid>
     <v-col cols="12">
-      <v-row align="center" justify="center" class="" style="height: 400px;">
+      <v-row align="center" justify="center" class="" style="height: 600px;">
         <v-card outlined tile>
           <v-img
             class="align-center text-center"
-            height="300px"
+            height="350px"
             src="https://picsum.photos/1920/1080?random"
           >
             <h2>Cette page est en contruction</h2>
