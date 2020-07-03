@@ -1,6 +1,6 @@
 ### Personal website intended to introduce myself and what I'm doing in the IT world.
 
-Here is the repository of [anthony-pillot.com](https://www.anthony-pillot.com/)
+Here is the repository of [anthony-pillot.com](https://www.anthony-pillot.com/) website.
 
 Made with (love) **Vue.js** and:
 * Vue.js CLI
@@ -8,8 +8,11 @@ Made with (love) **Vue.js** and:
 * Babel
 * ESLint
 * Prettier
+* Heroku
 * CircleCI
 * Cypress
+
+___
 
 ## Project setup
 ```
@@ -40,6 +43,13 @@ npm run test:e2e
 ```
 npm run lint
 ```
+
+### Start Express Node.js server used by Heroku
+```
+npm run start
+```
+
+___
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
