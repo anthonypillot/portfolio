@@ -11,10 +11,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "node server.js",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "node server.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
@@ -45,8 +45,7 @@
     "vue-cli-plugin-vuetify": "~2.0.6",
     "vue-template-compiler": "^2.6.11"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
