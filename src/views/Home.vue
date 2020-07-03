@@ -33,7 +33,7 @@
           <v-card class="pa-2 grey lighten-1" outlined tile>
             <v-row justify="center">
               <v-img
-                class="roll-in-blurred-right"
+                class="slide-in-right"
                 aspect-ratio="10"
                 :src="svgIcon.src"
                 contain
@@ -53,7 +53,7 @@
           <v-card class="pa-2 grey lighten-1" outlined tile>
             <v-row justify="center">
               <v-img
-                class="roll-in-blurred-right2"
+                class="slide-in-right-late"
                 aspect-ratio="10"
                 :src="svgIcon.src"
                 contain
@@ -73,7 +73,7 @@
           <v-card class="pa-2 grey lighten-1" outlined tile>
             <v-row justify="center">
               <v-img
-                class="roll-in-blurred-right3"
+                class="slide-in-right-very-late"
                 aspect-ratio="10"
                 :src="svgIcon.src"
                 contain
@@ -90,7 +90,7 @@
           <v-card class="pa-2 grey lighten-1" outlined tile>
             <v-row justify="center">
               <v-img
-                class="roll-in-blurred-right4"
+                class="slide-in-right-very-late-max"
                 aspect-ratio="10"
                 :src="svgIcon.src"
                 contain
@@ -116,82 +116,112 @@
     </h2>
     <v-divider class="my-4"></v-divider>
 
-    <div>
-      <h3 class="mb-1">GitHub :</h3>
-      <p>
-        Le code source de mon application web est disponible
-        <span class="font-italic">(bientôt)</span> en OpenSource, celles et ceux
-        qui veulent y participer peuvent d'hors et déjà le faire.
-      </p>
-      <v-parallax
-        height="200"
-        src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
-      >
-        <v-row align="center" justify="center">
-          <v-col class="text-center" cols="12">
-            <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
-            <span class=""
-              >The world's leading software development platform</span
-            >
-          </v-col>
-        </v-row>
-      </v-parallax>
-    </div>
+    <v-lazy
+      v-model="isActive"
+      :options="{
+        threshold: 0.5,
+      }"
+      min-height="200"
+      transition="fab-transition"
+    >
+      <div>
+        <h3 class="mb-1">GitHub :</h3>
+        <p>
+          Le code source de mon application web est disponible
+          <span class="font-italic">(bientôt)</span> en OpenSource, celles et
+          ceux qui veulent y participer peuvent d'hors et déjà le faire.
+        </p>
+        <v-parallax
+          height="200"
+          src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
+              <span class=""
+                >The world's leading software development platform</span
+              >
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </v-lazy>
 
     <v-divider class="my-4"></v-divider>
 
-    <div>
-      <h3 class="mb-1">Vue.js :</h3>
-      <p>
-        Ce site web a été conçu comme une application ou SPA
-        <span class="font-italic">
-          (Single Page Application)
+    <v-lazy
+      v-model="isActive"
+      :options="{
+        threshold: 0.5,
+      }"
+      min-height="200"
+      transition="fab-transition"
+    >
+      <div>
+        <h3 class="mb-1">Vue.js :</h3>
+        <p>
+          Ce site web a été conçu comme une application ou SPA
+          <span class="font-italic">
+            (Single Page Application)
+          </span>
+          avec Vue.js pour être plus polyvalent et répondre à des besoins
+          futurs.
+        </p>
+        <v-parallax
+          height="200"
+          src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
+              <span class="">Advanced front-end framework</span>
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </v-lazy>
+
+    <v-divider class="my-4"></v-divider>
+
+    <v-lazy
+      v-model="isActive"
+      :options="{
+        threshold: 0.5,
+      }"
+      min-height="200"
+      transition="fab-transition"
+    >
+      <div>
+        <h3 class="mb-1">Heroku :</h3>
+        <span>
+          Une démonstration des mises à jour futur de ce site internet est
+          hébergé sur Heroku qui est utilisé pour donner un aperçu de ma branche
+          <code>developer</code> et des nouvelles features que mon site peut et
+          pourra proposer.
         </span>
-        avec Vue.js pour être plus polyvalent et répondre à des besoins futurs.
-      </p>
-      <v-parallax
-        height="200"
-        src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
-      >
-        <v-row align="center" justify="center">
-          <v-col class="text-center" cols="12">
-            <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
-            <span class="">Advanced front-end framework</span>
-          </v-col>
-        </v-row>
-      </v-parallax>
-    </div>
-
-    <v-divider class="my-4"></v-divider>
-
-    <div>
-      <h3 class="mb-1">Heroku :</h3>
-      <span>
-        Une démonstration des mises à jour futur de ce site internet est hébergé
-        sur Heroku qui est utilisé pour donner un aperçu de ma branche
-        <code>developer</code> et des nouvelles features que mon site peut et
-        pourra proposer.
-      </span>
-      <v-btn
-        class="mb-1 white--text"
-        href="https://anthony-pillot.herokuapp.com/"
-        target="_blank"
-        tile
-        color="deep-purple"
-        >Heroku demo</v-btn
-      >
-      <v-parallax
-        height="200"
-        :src="require('@/assets/parallaxs/heroku_dashboard.png')"
-      >
-        <v-row align="center" justify="center">
-          <v-col class="text-center" cols="12">
-            <h1 class="display-4 font-weight-thin mb-4 black--text">Heroku</h1>
-            <span class="black--text">Demonstration website</span>
-          </v-col>
-        </v-row>
-      </v-parallax>
-    </div>
+        <v-btn
+          class="mb-1 white--text"
+          href="https://anthony-pillot.herokuapp.com/"
+          target="_blank"
+          tile
+          color="deep-purple"
+          >Heroku demo</v-btn
+        >
+        <v-parallax
+          height="200"
+          :src="require('@/assets/parallaxs/heroku_dashboard.png')"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-4 font-weight-thin mb-4 black--text">
+                Heroku
+              </h1>
+              <span class="black--text">Demonstration website</span>
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </v-lazy>
 
     <v-divider class="my-4"></v-divider>
   </div>
@@ -223,18 +253,9 @@ export default {
           "https://image.winudf.com/v2/image1/Y29tLnJpYmJ5dGUuZGFya21vZGUuZmIucHJvX3NjcmVlbl8wXzE1NjUyOTUwNzlfMDMx/screen-0.jpg?fakeurl=1&type=.jpg",
       },
       {
-        text: "Working on multiple languages",
-        src:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-      },
-      {
         text: "Work with JavaScript, Node.js, Java",
         src:
           "http://incurs.us/sites/default/files/2016-08/nodejs-wallpaper-1_0.png",
-      },
-      {
-        text: "Database: SQL & NoSQL",
-        src: "https://wallpapercave.com/wp/wp2347550.jpg",
       },
     ],
 
@@ -323,32 +344,25 @@ export default {
 </script>
 
 <style scoped>
-.roll-in-blurred-right {
-  -webkit-animation: roll-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1)
-    both;
-  animation: roll-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+.slide-in-right {
+  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-.roll-in-blurred-right2 {
-  -webkit-animation: roll-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1)
-    both;
-  animation: roll-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+.slide-in-right-late {
+  -webkit-animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-.roll-in-blurred-right3 {
-  -webkit-animation: roll-in-blurred-right 3s cubic-bezier(0.23, 1, 0.32, 1)
-    both;
-  animation: roll-in-blurred-right 3s cubic-bezier(0.23, 1, 0.32, 1) both;
+.slide-in-right-very-late {
+  -webkit-animation: slide-in-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-.roll-in-blurred-right4 {
-  -webkit-animation: roll-in-blurred-right 4s cubic-bezier(0.23, 1, 0.32, 1)
-    both;
-  animation: roll-in-blurred-right 4s cubic-bezier(0.23, 1, 0.32, 1) both;
+.slide-in-right-very-late-max {
+  -webkit-animation: slide-in-right 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* ----------------------------------------------
- * Generated by Animista on 2020-7-2 1:31:53
+ * Generated by Animista on 2020-7-3 12:56:30
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
@@ -356,38 +370,30 @@ export default {
 
 /**
  * ----------------------------------------
- * animation roll-in-blurred-right
+ * animation slide-in-right
  * ----------------------------------------
  */
-@-webkit-keyframes roll-in-blurred-right {
+@-webkit-keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(1000px) rotate(720deg);
-    transform: translateX(1000px) rotate(720deg);
-    -webkit-filter: blur(50px);
-    filter: blur(50px);
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
-    -webkit-filter: blur(0);
-    filter: blur(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-@keyframes roll-in-blurred-right {
+@keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(1000px) rotate(720deg);
-    transform: translateX(1000px) rotate(720deg);
-    -webkit-filter: blur(50px);
-    filter: blur(50px);
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
-    -webkit-filter: blur(0);
-    filter: blur(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }

@@ -133,11 +133,6 @@ export default {
         link: "/",
       },
       {
-        icon: "far fa-window-maximize",
-        title: "Information",
-        link: "/",
-      },
-      {
         icon: "fas fa-briefcase",
         title: "Expérience",
         link: "/experience",
@@ -145,17 +140,17 @@ export default {
       {
         icon: "fas fa-rocket",
         title: "Projets",
-        link: "/",
+        link: "/under-construction",
       },
       {
         icon: "fas fa-blog",
         title: "Blog",
-        link: "/",
+        link: "/under-construction",
       },
       {
         icon: "fas fa-mail-bulk",
         title: "Contact",
-        link: "/",
+        link: "/under-construction",
       },
       {
         icon: "fas fa-user-circle",
