@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: "/under-construction",
-    name: "Under Construction",
+    name: "UnderConstruction",
     component: () => import("../views/UnderConstruction.vue"),
   },
   {

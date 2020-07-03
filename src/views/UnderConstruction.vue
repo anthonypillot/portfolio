@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-col cols="12">
-      <v-row align="center" justify="center" class="" style="height: 600px;">
+      <v-row align="center" justify="center" style="height: 600px;">
         <v-card outlined tile>
           <v-img
             class="align-center text-center"
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "Under Construction",
+  name: "UnderConstruction",
 };
 </script>
 
