@@ -30,7 +30,7 @@
       <v-card class="mx-auto" max-width="300" tile>
         <v-list style="padding: 0px 0;">
           <v-subheader>MENU PRINCIPAL</v-subheader>
-          <v-list-item-group v-model="item" color="">
+          <v-list-item-group>
             <v-list-item
               v-for="(page, i) in pages"
               :key="i"
@@ -100,11 +100,11 @@
       </div>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-container fluid>
         <router-view />
       </v-container>
-    </v-content>
+    </v-main>
 
     <v-footer app>
       <span
