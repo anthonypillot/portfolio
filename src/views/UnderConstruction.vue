@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
-      <v-row align="center" justify="center">
-        <v-col class="text-center" cols="12">
-          <h1 class="display-4 font-weight-thin mb-4 black--text">
-            Under Construction
-          </h1>
-          <span class="black--text"
-            >We're working hard on it ! Come back later.</span
-          >
-        </v-col>
-      </v-row>
-    </v-parallax>
-  </div>
+  <v-container fluid>
+    <v-card class="mx-auto" outlined tile>
+      <v-img
+        class="align-center text-center"
+        height="200px"
+        src="https://picsum.photos/1920/1080?random"
+      >
+        <h2>Cette page est en contruction</h2>
+        <span>
+          Revenez plus tard pour voir les nouveautés
+        </span>
+      </v-img>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
