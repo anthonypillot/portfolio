@@ -33,13 +33,16 @@
         Langages utilisés en autonomie :
       </h3>
       <v-row no-gutters>
-        <v-col v-for="svgIcon in learnedLanguages" :key="svgIcon.src">
+        <v-col
+          v-for="learnedLanguage in learnedLanguages"
+          :key="learnedLanguage.src"
+        >
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="learnedLanguage.src"
                 contain
               />
             </v-row>
@@ -53,13 +56,16 @@
         Langages en cours d'apprentissage ou surveillés :
       </h3>
       <v-row no-gutters>
-        <v-col v-for="svgIcon in learningLanguages" :key="svgIcon.src">
+        <v-col
+          v-for="learningLanguage in learningLanguages"
+          :key="learningLanguage.src"
+        >
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right-late"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="learningLanguage.src"
                 contain
               />
             </v-row>
@@ -73,13 +79,13 @@
         Outils et technologies utilisées :
       </h3>
       <v-row no-gutters>
-        <v-col v-for="svgIcon in toolsFirstPart" :key="svgIcon.src">
+        <v-col v-for="toolFirstPart in toolsFirstPart" :key="toolFirstPart.src">
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right-very-late"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="toolFirstPart.src"
                 contain
               />
             </v-row>
@@ -90,13 +96,16 @@
 
     <div class="mt-3">
       <v-row no-gutters>
-        <v-col v-for="svgIcon in toolsSecondPart" :key="svgIcon.src">
+        <v-col
+          v-for="toolSecondPart in toolsSecondPart"
+          :key="toolSecondPart.src"
+        >
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right-very-late-max"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="toolSecondPart.src"
                 contain
               />
             </v-row>
@@ -104,6 +113,110 @@
         </v-col>
       </v-row>
     </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <v-lazy
+      :options="{
+        threshold: 0.5,
+      }"
+      min-height="200"
+      transition="fab-transition"
+    >
+      <div>
+        <h3 class="mb-1">GitHub :</h3>
+        <p>
+          Le code source de mon application web est disponible
+          <span class="font-italic">(bientôt)</span> en OpenSource, celles et
+          ceux qui veulent y participer peuvent d'hors et déjà le faire.
+        </p>
+        <v-parallax
+          height="200"
+          src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
+              <span class=""
+                >The world's leading software development platform</span
+              >
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </v-lazy>
+
+    <v-lazy
+      :options="{
+        threshold: 0.5,
+      }"
+      min-height="200"
+      transition="fab-transition"
+    >
+      <div>
+        <h3 class="mb-1">Vue.js :</h3>
+        <p>
+          Ce site web a été conçu comme une application ou SPA
+          <span class="font-italic">
+            (Single Page Application)
+          </span>
+          avec Vue.js pour être plus polyvalent et répondre à des besoins
+          futurs.
+        </p>
+        <v-parallax
+          height="200"
+          src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
+              <span class="">Advanced front-end framework</span>
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </v-lazy>
+
+    <v-divider class="my-4"></v-divider>
+
+    <v-lazy
+      :options="{
+        threshold: 0.5,
+      }"
+      min-height="200"
+      transition="fab-transition"
+    >
+      <div>
+        <h3 class="mb-1">Heroku :</h3>
+        <span>
+          Une démonstration des mises à jour futur de ce site internet est
+          hébergé sur Heroku qui est utilisé pour donner un aperçu de ma branche
+          <code>developer</code> et des nouvelles features que mon site peut et
+          pourra proposer.
+        </span>
+        <v-btn
+          class="mb-1 white--text"
+          href="https://anthony-pillot.herokuapp.com/"
+          target="_blank"
+          tile
+          color="deep-purple"
+          >Heroku demo</v-btn
+        >
+        <v-parallax
+          height="200"
+          :src="require('@/assets/parallaxs/heroku_dashboard.png')"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-4 font-weight-thin mb-4 black--text">
+                Heroku
+              </h1>
+              <span class="black--text">Demonstration website</span>
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </v-lazy>
 
     <v-divider class="my-4"></v-divider>
   </div>
