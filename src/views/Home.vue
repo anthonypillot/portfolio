@@ -1,7 +1,11 @@
 <template>
   <div>
     <v-carousel cycle height="350" show-arrows-on-hover interval="5000">
-      <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.src">
+      <v-carousel-item
+        v-for="slide in slides"
+        :key="slide.src"
+        :src="slide.src"
+      >
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 hidden-sm-and-down">{{ slide.text }}</div>
         </v-row>
@@ -29,13 +33,16 @@
         Langages utilisés en autonomie :
       </h3>
       <v-row no-gutters>
-        <v-col v-for="svgIcon in learnedLanguages" :key="svgIcon">
+        <v-col
+          v-for="learnedLanguage in learnedLanguages"
+          :key="learnedLanguage.src"
+        >
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="learnedLanguage.src"
                 contain
               />
             </v-row>
@@ -49,13 +56,16 @@
         Langages en cours d'apprentissage ou surveillés :
       </h3>
       <v-row no-gutters>
-        <v-col v-for="svgIcon in learningLanguages" :key="svgIcon">
+        <v-col
+          v-for="learningLanguage in learningLanguages"
+          :key="learningLanguage.src"
+        >
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right-late"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="learningLanguage.src"
                 contain
               />
             </v-row>
@@ -69,13 +79,13 @@
         Outils et technologies utilisées :
       </h3>
       <v-row no-gutters>
-        <v-col v-for="svgIcon in toolsFirstPart" :key="svgIcon">
+        <v-col v-for="toolFirstPart in toolsFirstPart" :key="toolFirstPart.src">
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right-very-late"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="toolFirstPart.src"
                 contain
               />
             </v-row>
@@ -86,13 +96,16 @@
 
     <div class="mt-3">
       <v-row no-gutters>
-        <v-col v-for="svgIcon in toolsSecondPart" :key="svgIcon">
+        <v-col
+          v-for="toolSecondPart in toolsSecondPart"
+          :key="toolSecondPart.src"
+        >
           <v-card class="pa-2" outlined tile>
             <v-row justify="center">
               <v-img
                 class="slide-in-right-very-late-max"
                 aspect-ratio="10"
-                :src="svgIcon.src"
+                :src="toolSecondPart.src"
                 contain
               />
             </v-row>
@@ -103,21 +116,7 @@
 
     <v-divider class="my-4"></v-divider>
 
-    <div>
-      <h3>Compétences clés :</h3>
-      <p>
-        Avenant. Passionné. Autodidacte. Autonome. Anticipation. Veille
-        technologique.
-      </p>
-    </div>
-    <v-divider class="my-4"></v-divider>
-    <h2>
-      Les technogies présentées et utilisées dans ce site internet :
-    </h2>
-    <v-divider class="my-4"></v-divider>
-
     <v-lazy
-      v-model="isActive"
       :options="{
         threshold: 0.5,
       }"
@@ -147,10 +146,7 @@
       </div>
     </v-lazy>
 
-    <v-divider class="my-4"></v-divider>
-
     <v-lazy
-      v-model="isActive"
       :options="{
         threshold: 0.5,
       }"
@@ -184,7 +180,6 @@
     <v-divider class="my-4"></v-divider>
 
     <v-lazy
-      v-model="isActive"
       :options="{
         threshold: 0.5,
       }"
@@ -273,7 +268,6 @@ export default {
         src: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
       },
     ],
-
     learningLanguages: [
       {
         src: "https://cdn.worldvectorlogo.com/logos/swift-15.svg",
@@ -317,26 +311,6 @@ export default {
       },
       {
         src: "https://cdn.worldvectorlogo.com/logos/microsoft-sql-server.svg",
-      },
-    ],
-
-    presentations: [
-      {
-        text:
-          "Qui suis-je ? Anthony Pillot, et il y a certaine chose que j'adore dans la vie : \
-          la high technology, ma passion depuis toujours. Amoureux d'Apple, de Windows (c'est possible !) de Linux,\
-           avec mon serveur personnel sous Debian, Ubuntu en Desktop et des applications IT quelles qu'elles soient !",
-      },
-      {
-        text:
-          "Ayant commencé sur Java, JEE et son écosystème, je travaille\
-            aujourd'hui dans l'écosystème JavaScript, TypeScript, ainsi que\
-            Node.js et Vue.js.",
-      },
-      {
-        text:
-          "Je travaille également sur la conception de base de données en SQL\
-          avec PostgreSQL, Microsoft SQL Server, en NoSQL avec MongoDB.",
       },
     ],
   }),
