@@ -1,7 +1,11 @@
 <template>
   <div>
     <v-carousel cycle height="350" show-arrows-on-hover interval="5000">
-      <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.src">
+      <v-carousel-item
+        v-for="slide in slides"
+        :key="slide.src"
+        :src="slide.src"
+      >
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 hidden-sm-and-down">{{ slide.text }}</div>
         </v-row>
