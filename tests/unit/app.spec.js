@@ -11,13 +11,23 @@ describe("Application root", () => {
   // Inspecter l'objet d'options du composant
   it("have `created` hook", () => {
     expect(typeof App.created).toBe("function");
+    expect(typeof App.data).toBe("function");
   });
 
   // Évaluer les résultats des fonctions dans
   // l'objet d'options du composant
-  it("contain author name variable", () => {
-    expect(typeof App.data).toBe("function");
+  it("contain correct author name", () => {
     const defaultData = App.data();
     expect(defaultData.author).toBe("Anthony PILLOT");
+  });
+
+  it("contain correct version number", () => {
+    const defaultData = App.data();
+    expect(defaultData.versionNumber).toBe("0.1.0");
+  });
+
+  it("contain array of pages", () => {
+    const defaultData = App.data();
+    expect(Array.isArray([defaultData.pages])).toBe(true);
   });
 });
