@@ -14,84 +14,74 @@
 
     <v-divider class="my-4"></v-divider>
 
-    <v-lazy
-      :options="{
-        threshold: 0.5,
-      }"
-      min-height="200"
-      transition="fab-transition"
-    >
-      <div>
-        <h3 class="mb-1">GitHub :</h3>
-        <p>
-          Le code source de cette application web est disponible
-          <span class="font-italic">(bientôt)</span> en OpenSource, celles et
-          ceux qui veulent y participer peuvent d'ores et déjà le faire.
-        </p>
-        <v-parallax
-          height="200"
-          src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
-        >
-          <v-row align="center" justify="center">
-            <v-col class="text-center" cols="12">
-              <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
-              <span class=""
-                >The world's leading software development platform</span
-              >
-            </v-col>
-          </v-row>
-        </v-parallax>
-      </div>
-    </v-lazy>
+    <h2>Technologies utilisées :</h2>
 
-    <v-lazy
-      :options="{
-        threshold: 0.5,
-      }"
-      min-height="200"
-      transition="fab-transition"
-    >
-      <div>
-        <h3 class="mb-1">Vue.js :</h3>
-        <p>
-          Ce site web a été conçu comme une application ou SPA
-          <span class="font-italic">
-            (Single Page Application)
-          </span>
-          avec Vue.js pour être plus polyvalent et répondre à des besoins
-          futurs.
-        </p>
-        <v-parallax
-          height="200"
-          src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
-        >
-          <v-row align="center" justify="center">
-            <v-col class="text-center" cols="12">
-              <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
-              <span class="">Advanced front-end framework</span>
-            </v-col>
-          </v-row>
-        </v-parallax>
-      </div>
-    </v-lazy>
+    <p>
+      Rapide présentation des technologies présentées et utilisées dans cette
+      application web.
+      <v-spacer />
+      Muni d'un nom de domaine, l'application est hébergé sur un serveur OVH sur
+      lequel Docker est installé, pour que chacune de mes applications soient
+      plus facilement managées et sécurisées.
+      <v-spacer />
+      Un conteneur NginX héberge l'applicaiton Vue.js sur laquelle vous êtes.
+      L'image Docker est actualisé automatiquement par la CI sur le repository,
+      triggered par la branche <code>master</code>.
+    </p>
 
     <v-divider class="my-4"></v-divider>
 
-    <v-lazy
-      :options="{
-        threshold: 0.5,
-      }"
-      min-height="200"
-      transition="fab-transition"
-    >
-      <div>
-        <h3 class="mb-1">Heroku :</h3>
-        <span>
-          Une démonstration des mises à jour futur de ce site internet est
-          hébergé sur Heroku qui est utilisé pour donner un aperçu de ma branche
-          <code>developer</code> et des nouvelles features que mon site peut et
-          pourra proposer.
+    <div>
+      <h3 class="mb-1">GitHub :</h3>
+      <p>
+        Le code source de cette application web est disponible
+        <span class="font-italic">(bientôt)</span> en OpenSource, celles et ceux
+        qui veulent y participer peuvent d'ores et déjà le faire.
+      </p>
+      <v-parallax
+        height="200"
+        src="https://siliconangle.com/wp-content/blogs.dir/1/files/2019/09/69061801_1983324578436489_6865726632515076096_o.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4">GitHub</h1>
+            <span class=""
+              >The world's leading software development platform</span
+            >
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">Vue.js :</h3>
+      <p>
+        Ce site web a été conçu comme une application ou SPA
+        <span class="font-italic">
+          (Single Page Application)
         </span>
+        avec Vue.js pour être plus polyvalent et répondre à des besoins futurs.
+      </p>
+      <v-parallax
+        height="200"
+        src="https://talhasariyuerek.com/wp-content/uploads/sites/4/2019/09/vue-logo-1920x1080.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4">Vue.js</h1>
+            <span class="">Advanced front-end framework</span>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
+
+    <v-divider class="my-4"></v-divider>
+
+    <div>
+      <h3 class="mb-1">
+        Heroku :
         <v-btn
           class="mb-1 white--text"
           href="https://anthony-pillot.herokuapp.com/"
@@ -100,23 +90,28 @@
           color="deep-purple"
           >Heroku demo</v-btn
         >
-        <v-parallax
-          height="200"
-          :src="require('@/assets/parallaxs/heroku_dashboard.png')"
-        >
-          <v-row align="center" justify="center">
-            <v-col class="text-center" cols="12">
-              <h1 class="display-4 font-weight-thin mb-4 black--text">
-                Heroku
-              </h1>
-              <span class="black--text">Demonstration website</span>
-            </v-col>
-          </v-row>
-        </v-parallax>
-      </div>
-    </v-lazy>
+      </h3>
 
-    <v-divider class="my-4"></v-divider>
+      <span>
+        Une démonstration des mises à jour futur de ce site internet est hébergé
+        sur Heroku qui est utilisé pour donner un aperçu de ma branche
+        <code>developer</code> et des nouvelles features que mon site peut et
+        pourra proposer.
+      </span>
+      <v-parallax
+        height="200"
+        :src="require('@/assets/parallaxs/heroku_dashboard.png')"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-4 font-weight-thin mb-4 black--text">
+              Heroku
+            </h1>
+            <span class="black--text">Demonstration website</span>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
   </div>
 </template>
 
