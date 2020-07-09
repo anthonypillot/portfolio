@@ -126,9 +126,9 @@
       <div>
         <h3 class="mb-1">GitHub :</h3>
         <p>
-          Le code source de mon application web est disponible
+          Le code source de cette application web est disponible
           <span class="font-italic">(bientôt)</span> en OpenSource, celles et
-          ceux qui veulent y participer peuvent d'hors et déjà le faire.
+          ceux qui veulent y participer peuvent d'ores et déjà le faire.
         </p>
         <v-parallax
           height="200"
