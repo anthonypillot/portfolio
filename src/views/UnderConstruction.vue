@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container class="under-construction" fluid>
     <v-col cols="12">
       <v-row align="center" justify="center" style="height: 600px;">
         <v-card outlined tile>

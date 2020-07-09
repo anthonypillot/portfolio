@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="experience">
     <h1>Expériences professionnelles :</h1>
     <v-divider class="my-4"></v-divider>
 
