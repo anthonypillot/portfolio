@@ -8,7 +8,6 @@ Made with (love) **Vue.js** and:
 * Babel
 * ESLint
 * Prettier
-* Heroku
 * CircleCI
 * Cypress
 
@@ -44,7 +43,7 @@ npm run test:e2e
 npm run lint
 ```
 
-### Start Express Node.js server used by Heroku
+### Start Express Node.js server used by Heroku ([Deployments page here](https://github.com/anthonypillot/anthony-pillot.com/deployments/))
 ```
 npm run start
 ```
