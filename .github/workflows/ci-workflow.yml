@@ -55,9 +55,10 @@ jobs:
           path: dist
 
   cypress-run:
-    name: E2E Cypress test using Node.js v${{ matrix.node-version }}
-    needs: build-test
+    name: E2E Cypress test
     runs-on: ubuntu-latest
+    
+    needs: build-test
 
     strategy:
       matrix:
