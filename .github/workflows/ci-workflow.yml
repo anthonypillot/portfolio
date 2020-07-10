@@ -72,9 +72,6 @@ jobs:
 
       - uses: actions/checkout@v2
 
-      # - name: Install dependencies
-      #   run: npm ci
-
       - name: Download build application artifact (located in /dist directory)
         uses: actions/download-artifact@v2
         with:
@@ -102,7 +99,6 @@ jobs:
           start: npm start
           wait-on: "http://localhost:8080/"
           group: Tests on Google Chrome with Node.js v${{ matrix.node-version }}
-          tag: node-${{ matrix.node-version }}
         env:
           CYPRESS_RECORD_KEY: cd73a67a-3e82-4a9c-a6f0-d6f403d64435
 
@@ -115,7 +111,7 @@ jobs:
         if: failure()
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
+          path: tests/e2e/screenshots
       # Test run video was always captured, so this action uses "always()" condition
       - name: Upload Cypress videos
         uses: actions/upload-artifact@v2
