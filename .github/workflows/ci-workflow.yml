@@ -99,7 +99,7 @@ jobs:
           CYPRESS_RECORD_KEY: cd73a67a-3e82-4a9c-a6f0-d6f403d64435
 
       - name: Upload Cypress video result
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: cypress-video-result
           path: tests/e2e/videos/
