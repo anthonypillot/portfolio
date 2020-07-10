@@ -11,6 +11,7 @@ on:
 
 jobs:
   build-test-deploy:
+    name: Build and test app
     runs-on: ubuntu-latest
 
     strategy:
@@ -42,12 +43,15 @@ jobs:
       # - run: ./node_modules/.bin/cypress run --browser chrome --record --key cd73a67a-3e82-4a9c-a6f0-d6f403d64435
       - name: Build application in /dist
         run: npm run build
-      - name: Cache builded files in /dist
-        id: cache-dist
-        uses: actions/cache@v2
+      - name: Saving build artifact /dist
+        uses: actions/upload-artifact@v1
         with:
+          name: builded-app
           path: dist
-          key: ${{ runner.os }}-dist
+      - name: Run ls -la
+        run: |
+          pwd
+          ls -la
 
   cypress-run:
     needs: build-test-deploy
@@ -64,6 +68,15 @@ jobs:
         uses: actions/setup-node@v1
       - name: Install dependencies
         run: npm ci
+      - name: Download /dist folder with builded files
+        uses: actions/download-artifact@v1
+        with:
+          name: builded-app
+
+      - name: Run ls -la
+        run: |
+          pwd
+          ls -la
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
