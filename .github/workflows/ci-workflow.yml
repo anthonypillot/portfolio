@@ -88,10 +88,13 @@ jobs:
       - name: Display structure of working directory
         run: ls -la
 
+      - name: Install last Cypress version
+        run: npm install cypress --save-dev
+
       - name: Run Cypress and record
         uses: cypress-io/github-action@v2
         with:
-          install: true
+          install: false
           record: true
           parallel: true
           browser: chrome
