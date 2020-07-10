@@ -101,6 +101,7 @@ jobs:
           browser: chrome
           start: npm start
           wait-on: "http://localhost:8080/"
+          group: Tests on Google Chrome with Node.js v${{ matrix.node-version }}
           tag: node-${{ matrix.node-version }}
         env:
           CYPRESS_RECORD_KEY: cd73a67a-3e82-4a9c-a6f0-d6f403d64435
@@ -109,7 +110,7 @@ jobs:
       # thus we store screenshots only on failures
       # Alternative: create and commit an empty cypress/screenshots folder
       # to always have something to upload
-      - name: Upload Cypress screenshots (if E2E test failed)
+      - name: Upload Cypress screenshots (if E2E Cypress test failed)
         uses: actions/upload-artifact@v2
         if: failure()
         with:
@@ -121,4 +122,4 @@ jobs:
         if: always()
         with:
           name: cypress-videos
-          path: cypress/videos
+          path: tests/e2e/videos/
