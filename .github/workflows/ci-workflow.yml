@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-test:
-    name: Build and unit test app
+    name: Build and run unit test
     runs-on: ubuntu-latest
 
     strategy:
@@ -45,7 +45,7 @@ jobs:
       - name: Run unit test with Jest
         run: npm run test:unit
 
-      - name: Build application in /dist
+      - name: Build application (located in /dist directory)
         run: npm run build
 
       - name: Upload build application artifact (located in /dist directory)
