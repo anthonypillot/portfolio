@@ -96,6 +96,7 @@ jobs:
           record: true
           parallel: false
           browser: chrome
+          tag: chrome
           start: npm start
           wait-on: "http://localhost:8080/"
           group: Tests on Google Chrome with Node.js v${{ matrix.node-version }}
