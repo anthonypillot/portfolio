@@ -117,6 +117,7 @@ import Typewriter from "@/assets/effects/typewriter";
 Typewriter.activateIt;
 
 export default {
+  name: "App",
   props: {
     source: String,
   },
