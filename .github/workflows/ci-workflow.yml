@@ -42,16 +42,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run unit test
+      - name: Run unit test with Jest
         run: npm run test:unit
 
       - name: Build application in /dist
         run: npm run build
 
-      - name: Upload build application artifact (/dist folder)
+      - name: Upload build application artifact (/dist directory)
         uses: actions/upload-artifact@v2
         with:
-          name: builded-application
+          name: build-application
           path: dist
 
   cypress-run:
@@ -75,11 +75,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Download build application artifact (/dist folder)
+      - name: Download build application artifact (/dist directory)
         uses: actions/download-artifact@v2
         with:
-          name: builded-application
+          name: build-application
           path: dist
+
+      - name: Display structure
+        run: ls -la
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Run Cypress and record
         uses: cypress-io/github-action@v2
@@ -87,6 +92,7 @@ jobs:
           install: false
           record: true
           parallel: true
+          browser: chrome
           start: npm start
           wait-on: "http://localhost:8080/"
         env:
