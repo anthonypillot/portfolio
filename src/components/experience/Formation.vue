@@ -46,6 +46,7 @@
 
 <script>
 export default {
+  name: "Formation",
   data: () => ({
     bachelorSkills: [
       {

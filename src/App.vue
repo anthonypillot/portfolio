@@ -10,13 +10,6 @@
       </v-row>
 
       <div class="hidden-sm-and-up">
-        <!-- <v-switch
-          class="ma-2"
-          v-model="$vuetify.theme.dark"
-          hide-details
-          label="Mode sombre"
-          color="success"
-        ></v-switch> -->
         <v-row class="ma-2" justify="center">
           <v-btn block outlined tile v-on:click="toggle_dark_mode"
             >Light or Dark Mode</v-btn
@@ -124,6 +117,7 @@ import Typewriter from "@/assets/effects/typewriter";
 Typewriter.activateIt;
 
 export default {
+  name: "App",
   props: {
     source: String,
   },
@@ -168,7 +162,7 @@ export default {
   }),
 
   created() {
-    this.$vuetify.theme.dark = true;
+    this.$vuetify.theme.dark = false;
   },
 
   methods: {
