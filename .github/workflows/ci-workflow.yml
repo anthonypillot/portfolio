@@ -10,13 +10,13 @@ on:
     branches: [master, developer]
 
 jobs:
-  build-test-deploy:
-    name: Build and test app
+  build-test:
+    name: Build and unit test app
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -48,19 +48,19 @@ jobs:
         with:
           name: dist
           path: dist
-      - name: Run ls -la
+      - name: Run "ls -la" command
         run: |
           pwd
           ls -la
 
   cypress-run:
-    needs: build-test-deploy
+    needs: build-test
     name: E2E Cypress test
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -73,7 +73,7 @@ jobs:
         with:
           name: dist
 
-      - name: Run ls -la
+      - name: Run "ls -la" command
         run: |
           pwd
           ls -la
