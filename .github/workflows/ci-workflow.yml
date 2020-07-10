@@ -39,31 +39,30 @@ jobs:
       # - run: npm run lint
       - run: npm run test:unit
       # - run: npm run test:e2e
-      - run: ./node_modules/.bin/cypress run --browser chrome --record --key cd73a67a-3e82-4a9c-a6f0-d6f403d64435
+      # - run: ./node_modules/.bin/cypress run --browser chrome --record --key cd73a67a-3e82-4a9c-a6f0-d6f403d64435
       - run: npm run build
 
   cypress-run:
+    name: E2E Cypress test
     runs-on: ubuntu-latest
-    # let's make sure our tests pass on Chrome browser
-    name: E2E on Chrome
-    steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
-        with:
-          browser: chrome
-
-  cypress-run-second:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      # https://github.com/cypress-io/github-action
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Install dependencies
+        run: npm ci
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v1
         with:
-          browser: chrome
+          install: false
+          start: npm start
+          wait-on: 'http://localhost:8080/'
           record: true
-          start: npm run serve
+          parallel: true
         env:
-          # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: cd73a67a-3e82-4a9c-a6f0-d6f403d64435
