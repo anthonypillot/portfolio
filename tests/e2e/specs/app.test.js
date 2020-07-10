@@ -1,7 +1,7 @@
 // https://docs.cypress.io/api/introduction/api.html
 
 describe("Global tests on root page", () => {
-  it("Visits and tests the app root url", () => {
+  it("Visit and tests the app root url", () => {
     cy.visit("http://localhost:8080");
     cy.contains("Anthony PILLOT");
     cy.contains("Consultant Développeur Informatique");
@@ -10,14 +10,14 @@ describe("Global tests on root page", () => {
     cy.contains("All rights reserved.");
     cy.contains("Application version:");
   });
-  it("Tests dark mode", () => {
+  it("Test dark mode", () => {
     cy.visit("http://localhost:8080");
     cy.get(".v-app-bar__nav-icon").click();
     cy.get(".hidden-xs-only > .row > .v-btn").click();
     cy.get(".v-overlay__scrim").click();
-    cy.visit("/");
+    cy.visit("http://localhost:8080");
   });
-  it("Visits and tests navigation app", () => {
+  it("Visit and tests navigation app", () => {
     cy.visit("http://localhost:8080");
     cy.get(".v-app-bar__nav-icon").click();
     cy.contains("MENU PRINCIPAL");
