@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup and use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js v${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
@@ -55,7 +55,7 @@ jobs:
           path: dist
 
   cypress-run:
-    name: E2E Cypress test
+    name: E2E Cypress test using Node.js v${{ matrix.node-version }}
     needs: build-test
     runs-on: ubuntu-latest
 
@@ -64,7 +64,7 @@ jobs:
         node-version: [12.x, 14.x]
 
     steps:
-      - name: Setup and use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js v${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
@@ -96,10 +96,28 @@ jobs:
         with:
           install: false
           record: true
-          parallel: true
+          parallel: false
           browser: chrome
           start: npm start
           wait-on: "http://localhost:8080/"
           tag: node-${{ matrix.node-version }}
         env:
           CYPRESS_RECORD_KEY: cd73a67a-3e82-4a9c-a6f0-d6f403d64435
+
+      # NOTE: screenshots will be generated only if E2E test failed
+      # thus we store screenshots only on failures
+      # Alternative: create and commit an empty cypress/screenshots folder
+      # to always have something to upload
+      - name: Upload Cypress screenshots (if E2E test failed)
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      # Test run video was always captured, so this action uses "always()" condition
+      - name: Upload Cypress videos
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
