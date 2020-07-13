@@ -31,7 +31,7 @@ describe("Global tests on root page", () => {
     cy.visit("http://localhost:8080");
     cy.get(".v-app-bar__nav-icon").click();
     cy.contains("Projets").click();
-    cy.url().should("include", "/under-construction");
+    cy.url().should("include", "/projects");
 
     cy.visit("http://localhost:8080");
     cy.get(".v-app-bar__nav-icon").click();
