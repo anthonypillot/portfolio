@@ -24,7 +24,7 @@
       lequel Docker est installé, pour que chacune de mes applications soient
       plus facilement managées et sécurisées.
       <v-spacer />
-      Un conteneur NginX héberge l'applicaiton Vue.js sur laquelle vous êtes.
+      Un conteneur NGINX héberge l'application Vue.js sur laquelle vous êtes.
       L'image Docker est actualisé automatiquement par la CI sur le repository,
       triggered par la branche <code>master</code>.
     </p>
