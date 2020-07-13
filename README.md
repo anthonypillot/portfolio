@@ -8,7 +8,7 @@ Made with (love) **Vue.js** and:
 * Babel
 * ESLint
 * Prettier
-* CircleCI
+* GitHub Actions
 * Cypress
 
 ___

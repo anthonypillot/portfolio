@@ -101,7 +101,7 @@ jobs:
           wait-on: "http://localhost:8080/"
           group: Tests on Google Chrome with Node.js v${{ matrix.node-version }}
         env:
-          CYPRESS_RECORD_KEY: cd73a67a-3e82-4a9c-a6f0-d6f403d64435
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       # NOTE: screenshots will be generated only if E2E test failed
       # thus we store screenshots only on failures
