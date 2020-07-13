@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>Présentation :</h2>
+    <h2>Présentation personnelle :</h2>
 
     <v-card class="pa-2" outlined tile>
       <span>
