@@ -8,7 +8,7 @@
         class="align-end"
         aspect-ratio="4"
         contain=""
-        src="https://www.anthony-pillot.com/assets/img/scheduled-shutdown-presentation-double-alpha.png"
+        src="@/assets/img/scheduled-shutdown-presentation-double-alpha.png"
       >
         <v-card-title
           >Scheduled-Shutdown
@@ -71,4 +71,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

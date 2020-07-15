@@ -5,13 +5,13 @@ name: Node.js CI
 
 on:
   push:
-    branches: [master, develop]
+    branches: [master]
   pull_request:
     branches: [master, develop]
 
 jobs:
   install-test-build:
-    name: Install deps and run unit test
+    name: Install deps and test
     runs-on: ubuntu-latest
 
     strategy:
