@@ -3,7 +3,7 @@
     <h1>Formation :</h1>
 
     <v-col cols="12">
-      <v-row :align="alignment" :justify="justify">
+      <v-row>
         <v-card tile>
           <v-list disabled>
             <v-subheader>
@@ -11,8 +11,8 @@
               <br />Bachelor - Titre professionnel RNCP - Concepteur Développeur
               d'Application
             </v-subheader>
-            <v-list-item-group v-model="item" color="primary">
-              <v-list-item v-for="(skill, i) in bachelorSkills" :key="i">
+            <v-list-item-group color="primary">
+              <v-list-item v-for="skill in bachelorSkills" :key="skill.text">
                 <v-list-item-content>
                   <v-list-item-title v-text="skill.text"></v-list-item-title>
                 </v-list-item-content>
@@ -30,8 +30,8 @@
               <br />LICENCE de Psychologie, parcours et spécialisation
               Psychologie du Travail.
             </v-subheader>
-            <v-list-item-group v-model="item" color="primary">
-              <v-list-item v-for="(skill, i) in licenceSkills" :key="i">
+            <v-list-item-group color="primary">
+              <v-list-item v-for="skill in licenceSkills" :key="skill.text">
                 <v-list-item-content>
                   <v-list-item-title v-text="skill.text"></v-list-item-title>
                 </v-list-item-content>

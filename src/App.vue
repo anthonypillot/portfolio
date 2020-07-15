@@ -137,7 +137,7 @@ export default {
       {
         icon: "fas fa-rocket",
         title: "Projets",
-        link: "/under-construction",
+        link: "/projects",
       },
       {
         icon: "fas fa-blog",

@@ -94,7 +94,7 @@ jobs:
         with:
           install: false
           record: true
-          parallel: false
+          parallel: true
           browser: chrome
           tag: chrome
           start: npm start
