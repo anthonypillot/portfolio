@@ -1,10 +1,11 @@
+# Reference: https://cli.vuejs.org/guide/deployment.html#docker-nginx
 FROM node:latest as build-stage
 
 WORKDIR /app
 
 COPY package*.json ./
 
-# Install dependencies
+# Install dependencies using "npm ci" (ref: https://docs.npmjs.com/cli/ci.html)
 RUN npm ci
 
 COPY ./ .
