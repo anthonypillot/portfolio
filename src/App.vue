@@ -46,13 +46,6 @@
 
       <template v-slot:append>
         <div class="hidden-xs-only">
-          <!-- <v-switch
-            class="ma-2"
-            v-model="$vuetify.theme.dark"
-            hide-details
-            label="Mode sombre"
-            color="success"
-          ></v-switch> -->
           <v-row class="ma-2" justify="center">
             <v-btn block outlined tile v-on:click="toggle_dark_mode"
               >Light or Dark Mode</v-btn
@@ -75,7 +68,9 @@
         max-width="50"
       ></v-img>
       <v-toolbar-title class="ml-6">
-        <span class="author">{{ author }}</span>
+        <span class="author"
+          >{{ $authorName }} {{ $authorLastName.toUpperCase() }}
+        </span>
         <span class="subtitle hidden-sm-and-down">
           - Consultant Développeur Informatique</span
         >
@@ -101,11 +96,11 @@
 
     <v-footer app>
       <span
-        >&copy; {{ new Date().getFullYear() }} {{ author }}. All rights
-        reserved.</span
+        >&copy; {{ new Date().getFullYear() }} {{ $authorName }}
+        {{ $authorLastName.toUpperCase() }}. All rights reserved.</span
       >
       <v-spacer></v-spacer>
-      <span>Application version: {{ versionNumber }}</span>
+      <span>Application version: {{ $version }}</span>
     </v-footer>
   </v-app>
 </template>
@@ -147,7 +142,7 @@ export default {
       {
         icon: "fas fa-mail-bulk",
         title: "Contact",
-        link: "/under-construction",
+        link: "/contact",
       },
       {
         icon: "fas fa-user-circle",
@@ -155,9 +150,6 @@ export default {
         link: "/about",
       },
     ],
-
-    author: "Anthony PILLOT",
-    versionNumber: "0.1.0",
     drawer: null,
   }),
 

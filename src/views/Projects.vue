@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="projects">
     <h1>Mes projets :</h1>
     <v-divider class="my-4" />
 
