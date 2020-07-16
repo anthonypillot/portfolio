@@ -1,11 +1,11 @@
 <template>
-  <v-container class="under-construction" fluid>
+  <div class="under-construction">
     <v-col cols="12">
       <v-row align="center" justify="center">
         <v-card outlined tile>
           <v-img
             class="align-center text-center"
-            height="350px"
+            height="300px"
             src="https://picsum.photos/1920/1080?random"
           >
             <h2 class="white--text">Cette page est en contruction</h2>
@@ -16,7 +16,7 @@
         </v-card>
       </v-row>
     </v-col>
-  </v-container>
+  </div>
 </template>
 
 <script>
