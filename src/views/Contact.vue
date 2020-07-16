@@ -6,10 +6,11 @@
     <v-col cols="12">
       <v-row align="center" justify="center">
         <div v-for="contact in contacts" :key="contact.name">
-          <v-card class="ma-2" max-width="350">
+          <v-card class="ma-3" max-width="500">
             <v-img
               class="align-end"
-              width="350"
+              contain
+              width="500"
               height="150"
               :src="contact.img"
             >
