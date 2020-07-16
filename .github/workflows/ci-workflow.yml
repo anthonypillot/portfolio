@@ -7,13 +7,15 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: [master, develop]
+    branches: [master]
 
 jobs:
+  # Install dependencies, run unit test, build the application and upload his artifact
   install-test-build:
     name: Install deps and test
     runs-on: ubuntu-latest
 
+    # Used to test install, test, build on each Node.js 12.x and 14.x versions
     strategy:
       matrix:
         node-version: [12.x, 14.x]
@@ -26,6 +28,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+        # Cache "node_modules" to make next pipelines faster
       - name: Cache "node_modules"
         uses: actions/cache@v2
         env:
@@ -39,27 +42,33 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+        # Install all dependencies without change package-lock.json (ref: https://docs.npmjs.com/cli/ci.html)
       - name: Install dependencies
         run: npm ci
 
+        # Run all tests using test framework
       - name: Run unit test using Jest
         run: npm run test:unit
 
+        # Build the application in production mode to get minifie source code
       - name: Build application (which will located in /dist directory)
         run: npm run build
 
+        # Upload bundle application as artifact, used later by Cypress
       - name: Upload build application artifact (located in /dist directory)
         uses: actions/upload-artifact@v2
         with:
-          name: build-application
+          name: bundle-application
           path: dist
 
+  # E2E testing using Cypress, than upload result videos as artifact
   cypress-run:
     name: E2E Cypress test
     runs-on: ubuntu-latest
 
     needs: install-test-build
 
+    # Used to test install, test, build on each Node.js 12.x and 14.x versions
     strategy:
       matrix:
         node-version: [12.x, 14.x]
@@ -75,20 +84,23 @@ jobs:
       - name: Download build application artifact (located in /dist directory)
         uses: actions/download-artifact@v2
         with:
-          name: build-application
+          name: bundle-application
           path: dist
 
+        # Developer feature to understand how GitHub Actions works
       - name: Display structure of downloaded files
         run: |
           cd dist
           ls -R
 
+        # Developer feature to understand how GitHub Actions works
       - name: Display structure of working directory
         run: ls -la
 
       - name: Install last Cypress version
         run: npm install cypress --save-dev
 
+        # Docs https://github.com/cypress-io/github-action
       - name: Run Cypress and record
         uses: cypress-io/github-action@v2
         with:
@@ -120,3 +132,20 @@ jobs:
         with:
           name: cypress-videos
           path: tests/e2e/videos/
+
+  # Build Docker image, using Dockerfile, .dockerignore and nginx.conf, than push on anthonypillot/website registry
+  docker-build-push:
+    name: Build and push Docker image
+    runs-on: ubuntu-latest
+
+    needs: cypress-run
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and push Docker image to registry
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: anthonypillot/website
+          tags: latest
