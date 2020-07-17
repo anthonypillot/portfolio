@@ -9,4 +9,4 @@ app.use(serveStatic(path.join(__dirname, "dist")));
 var port = process.env.PORT || 8080;
 
 app.listen(port);
-console.log("server started on port " + port);
+console.log("Express server started on port: " + port);

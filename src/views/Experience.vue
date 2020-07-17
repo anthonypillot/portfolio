@@ -7,8 +7,8 @@
       <v-list
         subheader
         disabled
-        v-for="(experience, i) in experiences"
-        :key="i"
+        v-for="experience in experiences"
+        :key="experience.header"
       >
         <v-toolbar
           src="https://heintzimmobilierethotels.com/wp-content/uploads/2016/05/background-immeuble.jpg"
@@ -22,7 +22,10 @@
         </v-toolbar>
         <v-subheader> Objectif : {{ experience.subheader }} </v-subheader>
 
-        <v-list-item v-for="(content, i) in experience.contents" :key="i">
+        <v-list-item
+          v-for="content in experience.contents"
+          :key="content.title"
+        >
           <v-list-item-content>
             <v-list-item-title
               >{{ content.title }}
@@ -117,7 +120,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .experience-header {
   color: white;
 }

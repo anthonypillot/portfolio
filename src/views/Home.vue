@@ -24,10 +24,34 @@
       lequel Docker est installé, pour que chacune de mes applications soient
       plus facilement managées et sécurisées.
       <v-spacer />
-      Un conteneur NginX héberge l'applicaiton Vue.js sur laquelle vous êtes.
+      Un conteneur NGINX héberge l'application Vue.js sur laquelle vous êtes.
       L'image Docker est actualisé automatiquement par la CI sur le repository,
       triggered par la branche <code>master</code>.
     </p>
+
+    <v-col cols="12">
+      <v-row align="center" justify="center">
+        <div v-for="technology in technologies" :key="technology.name">
+          <v-card class="ma-2" max-width="420">
+            <v-img class="align-end" height="150" :src="technology.img">
+              <v-card-title
+                ><v-btn :href="technology.link" target="_blank">
+                  {{ technology.name }}
+                </v-btn></v-card-title
+              >
+            </v-img>
+            <v-card-subtitle class="pb-0">{{
+              technology.category
+            }}</v-card-subtitle>
+            <v-card-text class="text--primary">
+              <div>
+                {{ technology.description }}
+              </div>
+            </v-card-text>
+          </v-card>
+        </div>
+      </v-row>
+    </v-col>
 
     <v-divider class="my-4"></v-divider>
 
@@ -144,6 +168,53 @@ export default {
         text: "Work with JavaScript, Node.js, Java",
         src:
           "http://incurs.us/sites/default/files/2016-08/nodejs-wallpaper-1_0.png",
+      },
+    ],
+    technologies: [
+      {
+        name: "Vue.js",
+        category: "FRAMEWORK",
+        link: "https://vuejs.org/",
+        img: "https://i.ytimg.com/vi/Vp37fWKOlV4/maxresdefault.jpg",
+        description: "Framework front-end",
+      },
+      {
+        name: "Vue.js CLI",
+        category: "TOOLS",
+        link: "https://cli.vuejs.org/",
+        img: "https://cli.vuejs.org/cli-select-features.png",
+        description: "Outils CLI pour développer une application Vue.js",
+      },
+      {
+        name: "Vue Router",
+        category: "TOOLS",
+        link: "https://cli.vuejs.org/",
+        img:
+          "https://scotch-res.cloudinary.com/image/upload/w_1500,q_auto:good,f_auto/media/3660/h49pHk3ORDWKylIlU7bE_maxresdefault.jpg",
+        description: "Router officiel pour Vue.js",
+      },
+      {
+        name: "Vuetify",
+        category: "COMPONENT FRAMEWORK",
+        link: "https://vuetifyjs.com/",
+        img: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+        description: "Bibliothèque de composants utilisateur",
+      },
+      {
+        name: "GitHub Actions",
+        category: "CONTINUOUS INTEGRATION",
+        link: "https://github.com/features/actions",
+        img:
+          "https://www.beopenit.com/wp-content/uploads/2020/01/DL-V2-LinkedIn_FB.png",
+        description: "CI utilisée dans le build, les tests, le deploys",
+      },
+      {
+        name: "Cypress.io",
+        category: "CONTINUOUS INTEGRATION",
+        link: "https://www.cypress.io/",
+        img:
+          "https://snipcart.com/media/203963/cypressio-logo-with-blue-background.png",
+        description: "Framework de tests End to End (E2E)",
       },
     ],
   }),
