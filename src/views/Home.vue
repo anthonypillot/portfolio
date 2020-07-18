@@ -140,6 +140,8 @@
 </template>
 
 <script>
+const nodejsGreenBackground = require("@/assets/img/nodejs-wallpaper-1_0.png");
+
 export default {
   name: "Home",
   components: {},
@@ -166,8 +168,7 @@ export default {
       },
       {
         text: "Work with JavaScript, Node.js, Java",
-        src:
-          "http://incurs.us/sites/default/files/2016-08/nodejs-wallpaper-1_0.png",
+        src: nodejsGreenBackground,
       },
     ],
     technologies: [
