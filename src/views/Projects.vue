@@ -53,7 +53,7 @@
           color="blue"
           outlined
           text
-          href="https://gitlab.com/RAIIIIIN/scheduled-shutdown"
+          href="https://gitlab.com/anthonypillot/scheduled-shutdown"
           target="_blank"
         >
           Code source sur GitLab
