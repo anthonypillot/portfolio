@@ -8,9 +8,9 @@
             height="300px"
             src="https://picsum.photos/1920/1080?random"
           >
-            <h2 class="white--text">Cette page est en contruction</h2>
+            <h2 class="white--text">Cette page est en construction</h2>
             <span class="white--text">
-              Revenez plus tard pour voir les nouveautés
+              Revenez plus tard pour les nouveautés
             </span>
           </v-img>
         </v-card>

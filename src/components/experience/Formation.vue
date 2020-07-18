@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Formation :</h1>
+    <v-divider class="my-4"></v-divider>
 
     <v-col cols="12">
       <v-row>

@@ -41,8 +41,7 @@
       </v-list>
     </v-card>
 
-    <v-divider class="my-4"></v-divider>
-    <Formation />
+    <Formation class="mt-4" />
   </div>
 </template>
 
