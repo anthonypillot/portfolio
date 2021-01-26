@@ -1,6 +1,6 @@
 ### Personal website intended to introduce myself and what I'm doing in the IT world.
 
-![Node.js CI](https://github.com/anthonypillot/anthony-pillot.com/workflows/Node.js%20CI/badge.svg)
+![Website CI/CD](https://github.com/anthonypillot/anthony-pillot.com/workflows/Website%20CI/CD/badge.svg)
 
 <img src="https://www.anthony-pillot.com/img/programming.2be4b4c7.svg" alt="website logo" width="200"/>
 

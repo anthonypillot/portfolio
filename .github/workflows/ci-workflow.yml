@@ -1,13 +1,13 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Website CI
+name: Website CI/CD
 
 on:
   push:
     branches: [master]
   pull_request:
-    branches: [master]
+    branches: [master, develop]
 
 jobs:
   # Install dependencies, run unit test, build the application and upload his artifact
@@ -68,10 +68,10 @@ jobs:
 
     needs: install-test-build
 
-    # Used to test install, test, build on each Node.js 14.x and 15.x versions
+    # Used to test install, test, build on each Node.js 14.x and other versions
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
 
     steps:
       - name: Setup Node.js v${{ matrix.node-version }}
@@ -138,6 +138,7 @@ jobs:
     name: Build and push Docker image
     runs-on: ubuntu-latest
 
+    if: github.ref == 'refs/heads/master'
     needs: cypress-run
 
     steps:
@@ -163,6 +164,7 @@ jobs:
   docker-run:
     name: Docker run container on server
 
+    if: github.ref == 'refs/heads/master'
     needs: docker-build-push
 
     runs-on: ubuntu-latest
@@ -175,9 +177,14 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            echo "Delete remaining docker container"
-            sudo -S docker container rm -f nginx-website
-            echo "Delete remaining docker image"
-            sudo -S docker image rm -f anthonypillot/website
+            echo "Remove remaining docker container"
+            docker container rm -f nginx-website
+
+            echo "Remove remaining docker image"
+            docker image rm -f anthonypillot/website
+
             echo "Run and deploy docker container"
-            sudo -S docker run -d --name nginx-website -p 80:80 -p 443:443 --network website -v /etc/letsencrypt/archive/www.anthony-pillot.com/:/etc/nginx/certs anthonypillot/website
+            docker run -d --name nginx-website -p 80:80 -p 443:443 -v /etc/letsencrypt/archive/anthony-pillot.com/:/etc/nginx/certs anthonypillot/website
+
+            echo "Logs of the container:"
+            docker container logs nginx-website
