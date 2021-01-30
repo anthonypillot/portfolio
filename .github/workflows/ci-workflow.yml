@@ -1,13 +1,13 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Website CI/CD
 
 on:
   push:
     branches: [master]
   pull_request:
-    branches: [master]
+    branches: [master, develop]
 
 jobs:
   # Install dependencies, run unit test, build the application and upload his artifact
@@ -15,10 +15,10 @@ jobs:
     name: Install deps and test
     runs-on: ubuntu-latest
 
-    # Used to test install, test, build on each Node.js 12.x and 14.x versions
+    # Used to test install, test, build on each Node.js 14.x and 15.x versions
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -51,7 +51,7 @@ jobs:
         run: npm run test:unit
 
         # Build the application in production mode to get minifie source code
-      - name: Build application (which will located in /dist directory)
+      - name: Build application (which is located in /dist directory)
         run: npm run build
 
         # Upload bundle application as artifact, used later by Cypress
@@ -68,10 +68,10 @@ jobs:
 
     needs: install-test-build
 
-    # Used to test install, test, build on each Node.js 12.x and 14.x versions
+    # Used to test install, test, build on each Node.js 14.x and other versions
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x]
 
     steps:
       - name: Setup Node.js v${{ matrix.node-version }}
@@ -138,28 +138,53 @@ jobs:
     name: Build and push Docker image
     runs-on: ubuntu-latest
 
+    if: github.ref == 'refs/heads/master'
     needs: cypress-run
 
     steps:
-          -
-            name: Set up QEMU
-            uses: docker/setup-qemu-action@v1
-          -
-            name: Set up Docker Buildx
-            uses: docker/setup-buildx-action@v1
-          -
-            name: Login to DockerHub
-            uses: docker/login-action@v1 
-            with:
-              username: ${{ secrets.DOCKERHUB_USERNAME }}
-              password: ${{ secrets.DOCKERHUB_TOKEN }}
-          -
-            name: Build and push
-            id: docker_build
-            uses: docker/build-push-action@v2
-            with:
-              push: true
-              tags: anthonypillot/website:latest
-          -
-            name: Image digest
-            run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: anthonypillot/website:latest
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+
+  # Use SSH connection to remove remaining image, container and run a new container
+  docker-run:
+    name: Docker run container on server
+
+    if: github.ref == 'refs/heads/master'
+    needs: docker-build-push
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            echo "Remove remaining docker container"
+            docker container rm -f nginx-website
+
+            echo "Remove remaining docker image"
+            docker image rm -f anthonypillot/website
+
+            echo "Run and deploy docker container"
+            docker run -d --name nginx-website -p 80:80 -p 443:443 -v /etc/letsencrypt/archive/anthony-pillot.com/:/etc/nginx/certs anthonypillot/website
+
+            echo "Logs of the container:"
+            docker container logs nginx-website
