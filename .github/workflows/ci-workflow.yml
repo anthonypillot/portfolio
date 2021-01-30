@@ -68,16 +68,11 @@ jobs:
 
     needs: install-test-build
 
-    # Used to test install, test, build on each Node.js 14.x and other versions
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-      - name: Setup Node.js v${{ matrix.node-version }}
+      - name: Setup Node.js v14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
 
       - uses: actions/checkout@v2
 
@@ -169,7 +164,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: executing remote ssh commands using password
+      - name: Executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
