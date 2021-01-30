@@ -13,7 +13,7 @@ COPY ./ .
 # Build bundle application (located in /dist directory)
 RUN npm run build
 
-FROM nginx as production-stage
+FROM nginx:latest as production-stage
 
 RUN mkdir /app
 
@@ -21,4 +21,4 @@ RUN mkdir /app
 COPY --from=build-stage /app/dist /app
 
 # Copy NGINX config file in image
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY config/nginx.conf /etc/nginx/nginx.conf
