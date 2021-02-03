@@ -179,7 +179,7 @@ jobs:
             docker image rm -f anthonypillot/website
 
             echo "Run and deploy docker container"
-            docker run -d --name nginx-website -p 80:80 -p 443:443 -v /etc/letsencrypt/archive/anthony-pillot.com/:/etc/nginx/certs anthonypillot/website
+            docker run -d --restart always --name nginx-website -p 80:80 -p 443:443 -v /etc/letsencrypt/archive/anthony-pillot.com/:/etc/nginx/certs anthonypillot/website
 
             echo "Logs of the container:"
             docker container logs nginx-website
