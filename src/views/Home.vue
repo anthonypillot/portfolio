@@ -83,9 +83,7 @@
       <h3 class="mb-1">Vue.js :</h3>
       <p>
         Ce site web a été conçu comme une application ou SPA
-        <span class="font-italic">
-          (Single Page Application)
-        </span>
+        <span class="font-italic"> (Single Page Application) </span>
         avec Vue.js pour être plus polyvalent et répondre à des besoins futurs.
       </p>
       <v-parallax
@@ -128,9 +126,7 @@
       >
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <h1 class="display-4 font-weight-thin mb-4 black--text">
-              Heroku
-            </h1>
+            <h1 class="display-4 font-weight-thin mb-4 black--text">Heroku</h1>
             <span class="black--text">Demonstration website</span>
           </v-col>
         </v-row>
