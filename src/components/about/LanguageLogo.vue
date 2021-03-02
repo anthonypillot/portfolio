@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="mt-3">
-      <h3>
-        Langages utilisés en autonomie :
-      </h3>
+      <h3>Langages utilisés en autonomie :</h3>
       <v-row no-gutters>
         <v-col
           v-for="learnedLanguage in learnedLanguages"
@@ -24,9 +22,7 @@
     </div>
 
     <div class="mt-3">
-      <h3>
-        Langages en cours d'apprentissage ou surveillés :
-      </h3>
+      <h3>Langages en cours d'apprentissage ou surveillés :</h3>
       <v-row no-gutters>
         <v-col
           v-for="learningLanguage in learningLanguages"
@@ -47,9 +43,7 @@
     </div>
 
     <div class="mt-3">
-      <h3>
-        Outils et technologies utilisées :
-      </h3>
+      <h3>Outils et technologies utilisées :</h3>
       <v-row no-gutters>
         <v-col v-for="toolFirstPart in toolsFirstPart" :key="toolFirstPart.src">
           <v-card class="pa-2" outlined tile>
