@@ -21,7 +21,7 @@
       </div>
 
       <v-card class="mx-auto" max-width="300" tile>
-        <v-list style="padding: 0px 0;">
+        <v-list style="padding: 0px 0">
           <v-subheader>MENU PRINCIPAL</v-subheader>
           <v-list-item-group>
             <v-list-item
