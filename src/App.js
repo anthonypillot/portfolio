@@ -1,4 +1,4 @@
-import TopBar from "./components/TopBar";
+import TopBar from "./components/TopBar/TopBar";
 import LoadingProgressBar from "./components/LoadingProgressBar";
 import "./App.css";
 import "./style/CenterBox.css";

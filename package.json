@@ -1,13 +1,13 @@
 {
-  "name": "anthonypillot-os",
+  "name": "anthonypillotos",
+  "version": "0.1.0",
+  "private": true,
   "description": "Personal application intended to introduce myself, a blog, and what I'm doing in the IT world.",
   "author": {
     "name": "Anthony PILLOT",
     "email": "pillot.anthony@gmail.com",
     "url": "https://anthony-pillot.com"
   },
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
