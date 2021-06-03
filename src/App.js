@@ -1,4 +1,3 @@
-import BottomBar from "./components/BottomBar";
 import TopBar from "./components/TopBar";
 import LoadingProgressBar from "./components/LoadingProgressBar";
 import "./App.css";
@@ -31,8 +30,6 @@ function App() {
       </div>
 
       {/* End of middle content */}
-
-      <BottomBar />
     </div>
   );
 }
