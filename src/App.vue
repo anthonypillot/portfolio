@@ -52,7 +52,7 @@
             >
           </v-row>
           <div class="ma-2">
-            <v-btn href="/v1" block tile>Ancienne version</v-btn>
+            <v-btn href="/v1/" block tile>Ancienne version</v-btn>
           </div>
         </div>
       </template>
