@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+<div align="center">
+<img src="https://github.com/anthonypillot/anthonypillotOS/blob/develop/assets/img/logo_anthonypillotOS_black.svg" alt="anthonypillotOS logo" width="200"/>
+
+# Web application project repository
+</div>
+
+## Getting Started with anthonypillotOS app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
